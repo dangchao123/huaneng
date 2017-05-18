@@ -1765,5 +1765,23 @@ p.para {
     a:link{
         color: #86c724;
     }
+    .nav2{
+        text-align: center;
+    }
+    .nav2 li{
+        display: inline-block;
+        float: none;
+
+    }
+    .nav2 li a {
+        text-decoration: none;
+        color: #212121;
+        font-size: 17px;
+        letter-spacing: 2px;
+        padding: 15px 30px;
+    }
+    .nav2 li a.active{
+        color: #86c724;
+    }
 }
 
