@@ -1750,29 +1750,37 @@ p.para {
     .top {
         padding: 5px 0 10px;
     }
-    .breadcrumb{
+
+    .breadcrumb {
         background-color: #fff;
     }
-    .breadcrumb a{
+
+    .breadcrumb a {
         color: #212121;
     }
-    .breadcrumb a:hover{
-        text-decoration: none ;
+
+    .breadcrumb a:hover {
+        text-decoration: none;
     }
-    .breadcrumb li.active{
-        color:#86c724;
-    }
-    a:link{
+
+    .breadcrumb li.active {
         color: #86c724;
     }
-    .nav2{
+
+    a:link {
+        color: #86c724;
+    }
+
+    .nav2 {
         text-align: center;
     }
-    .nav2 li{
+
+    .nav2 li {
         display: inline-block;
         float: none;
 
     }
+
     .nav2 li a {
         text-decoration: none;
         color: #212121;
@@ -1780,8 +1788,13 @@ p.para {
         letter-spacing: 2px;
         padding: 15px 30px;
     }
-    .nav2 li a.active{
+
+    .nav2 li a.active {
         color: #86c724;
     }
+p{
+line-height: 20px;
+}
+
 }
 
