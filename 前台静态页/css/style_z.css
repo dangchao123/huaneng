@@ -1795,6 +1795,7 @@ p.para {
 p{
 line-height: 20px;
 }
-
+    .teaser span{display:block;color:#909090;}
+    .teaser{margin-top:5px;}
 }
 
