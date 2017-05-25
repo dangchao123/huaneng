@@ -1570,6 +1570,11 @@ table.table.table-striped,.table-bordered,.bs-docs-example {
     margin-bottom: 28px;
     font-weight: 600;
 }
+.agile-prod1 h5 {
+    text-transform: uppercase;
+    color: #86c724;
+    font-size: 20px;
+}
 .agile-prod2 h4 {
     text-transform: uppercase;
     color: #86c724;
@@ -1577,6 +1582,9 @@ table.table.table-striped,.table-bordered,.bs-docs-example {
     letter-spacing: 2px;
     margin-bottom: 28px;
     font-weight: 600;
+}
+.agile-prod2 li{
+      list-style: none;
 }
 .agile-prod1 p{
 	font-size: 1.1em;
