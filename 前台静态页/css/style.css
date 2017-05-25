@@ -169,22 +169,25 @@ p.para span {
 	margin: 0 auto;
 }
 
-
 .w3l-abt-grid h4 {
     
+    margin-top: 1em;
+
+}
+.w3l-abt-grid h4 a{
+    
     font-size: 20px;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
     margin: 30px 0 12px;
 
 }
-.w3l-abt-grid a{
-    color: black;
-    text-decoration: none;
-    font-weight: 600;
+.w3l-abt-grid img{
+    width: 200px;
+    height: 150px;
 }
 .w3l-abt-grid {
     border: 1px solid #e6e1d8;
-    height:270px; 
+    height:220px; 
     width: 30%;
     margin: 0 0.5%;    
 }
@@ -923,9 +926,7 @@ p.para {
     width: 32.333%;
     float: left;
 }
-.w3l-abt-grid h4 {
-    font-size: 22px;
-}
+
 .w3layouts-clients {
     padding: 60px 0;
 }
