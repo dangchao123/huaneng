@@ -1,0 +1,200 @@
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
+<html lang="en">
+<head>
+<title>新闻内容</title>    
+<link href="/huaneng/Public/before/css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all" />     
+<link href="/huaneng/Public/before/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/huaneng/Public/before/css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/huaneng/Public/before/css/slider.css" rel="stylesheet" type="text/css" media="all" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="application/x-javascript">
+    addEventListener("load", function() {
+         setTimeout(hideURLbar, 0);
+     }, false);
+     function hideURLbar(){ 
+          window.scrollTo(0,1);
+     } 
+ </script>
+<script type="text/javascript" src="/huaneng/Public/before/js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="/huaneng/Public/before/js/nav.js"></script>
+<script type="text/javascript" src="/huaneng/Public/before/js/slider.js"></script>
+<script src="/huaneng/Public/before/js/bootstrap.js"></script>
+</head>
+<body>
+<!-- header -->
+    <header>
+        <div class="top">
+            <div class="container">
+                <div class="logo">
+                    <h1><a href="index.html">华能<span>电源 </span></a></h1>
+                </div>
+                <div class="agileits-contact-info text-right">
+                    <ul>
+                        <li><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span><a href="mailto:info@example.com">mail@example.com</a></li>
+                        <li><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>+080 264 995</li>
+                    </ul>
+                </div>
+                
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        
+            <nav class="navbar navbar-default">
+              <div class="container">
+                <!-- 手机导航栏 -->
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button> 
+                </div>
+
+                <!-- 导航栏 -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                  <ul class="nav navbar-nav">
+                    <li><a  href="index.html">首 页</a></li>
+                    <li class="dropdown">
+                        <a href="产品列表.html">产品中心<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                          <li><a href="产品列表.html">光伏逆变器</a></li>                          
+                          <li><a href="产品列表.html">风能变流器</a></li>
+                          <li><a href="产品列表.html">储能系统</a></li>
+                          <li><a href="产品列表.html">新能源汽车驱动系统</a></li>
+                        
+                      </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="方案列表.html">解决方案<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                          <li><a href="方案内容1.html">光伏逆变器</a></li>
+                          
+                          <li><a href="方案内容2.html">电站系统</a></li>
+                          <li><a href="方案内容1.html">储能系统</a></li>
+                          <li><a href="方案内容1.html">新能源汽车驱动系统</a></li>
+                          
+                      </ul>
+                    </li>
+            
+                    
+                    <li><a href="services.html">服务与支持</a></li>
+
+                    <li><a href="contact.html">联系我们</a></li>
+                  </ul>
+                </div>
+              </div>
+            </nav>
+    </header>
+    <!-- //header -->
+    <!-- banner -->
+    <div class="agile-banner">
+    </div>
+    <!-- //banner -->   
+    <!-- 面包屑+小导航 -->
+    <div class="agile-prod">
+        <div class="container">
+            <div class="breadcrumb1">               
+                <ol class="breadcrumb">
+                    <li><a href="index.html">首页</a></li>
+                    <li><a href="公司新闻.html">新闻</a></li>
+                    <li class="active">新闻内容</li>
+                </ol>
+            </div>
+
+        </div>
+    </div>
+    <!-- 面包屑+小导航结束 -->
+     <main class="content-masthead"  role="main">
+    
+    <nav class="bc-nav">
+        <div class="container">
+
+        </div>
+    </nav>
+    <section class="main-section">
+        <div class="container">
+            <div class="cms cms-80 news-detail">
+                <h2 class="text-center">华能电源入选国家发改委28个新能源微电网示范项目名单</h2>
+                <div class="news-subheadings text-center">
+                    <span>时间：2017-05-10</span>
+                    <span>来源：Sungrow</span>
+                    <span>访问：762</span>
+                </div>
+                <article>
+                    <p>
+                        为加快推进新能源微电网示范工程建设，探索适应新能源发展的微电网技术及运营管理体制，日前，国家发改委、国家能源局下发通知，公布28个新能源微电网示范项目名单，华能电源作为“合肥市高新区微电网示范项目”业主单位入选。
+                    </p>
+                    </br>
+                    <p align="center">
+
+                        <img src="/huaneng/Public/before/images/news1.jpg" ></p>
+                    <p>
+                        “合肥市高新区微电网示范项目”由两个子微网构成，包含光伏发电8MW，两个2MW/4MWh的储能系统，以及22台250kW的充电桩；子微网之间通过虚拟电网的方式互联，并通过电力交易的方式统一结算，其供能范围不仅能满华能电源产业园区的用电需要，同时还能覆盖合肥高新区临近的企业、科研机构及相关配套服务机构。
+                    </p>
+                    </br>
+                    <p>
+                        “该项目涉及微电网系统的设计、建设、运营与管理，集结多个专业领域的关键技术。”该项目的负责人胡兵博士表示，华能电源掌握全球领先的新能源发电系统接入技术、储能技术，并建有可实现多能管理的iSolar智慧能源管理平台，项目的获批，为下一步深入探讨多能互补、综合能源服务、区域能源互联网及售电业务等提供了一条清晰的路径。
+                    </p>
+                    </br>
+                    <p>
+                        自1997年成立以来，华能电源积极承担新能源领域的国家科技计划项目和示范项目，与中国电科院、清华大学、合肥工业大学等科研机构开展长期技术合作，为实现我国光伏、风电的大规模应用做出了不懈的努力。深耕新能源产业20年，这种技术层面和应用层面形成的“最强合力”，也为华能电源的品牌建设工作不断注入创新和技术的基因，成就行业领跑地位。
+                    </p>
+                    </br>
+                </article>
+                <div class="row">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-10">
+                            <div class="col-md-6">上一篇：<a href="">XXXXXXXXX</a></div>
+                            <div class="col-md-6">下一篇：<a href="">%%%%%%%%%%</a></div>
+                        </div>
+                        <div class="col-md-2"></div>
+                 </div>
+
+            </div>
+        </div>
+    </section>
+</main>
+   
+<!-- footer -->
+    <div class="footer-top">
+        <div class="container">
+            <div class="col-md-4 wthree-footer-top">
+                <h3><a href="index.html">华能<span>电源</span></a></h3>
+                    <ul>
+                        <li><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span><a href="mailto:info@example.com">mail@example.com</a></li>
+                        <li><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>+080 264 995</li>
+                    </ul>
+            </div>
+            <div class="col-md-3 w3ls-footer-top">
+                <h3>快速<span>链接</span></h3>
+                        <ul>
+                            <li><a href="index.html">首页</a></li>
+                            <li><a href="产品列表.html">产品</a></li>
+                            <li><a href="方案列表.html">解决方案</a></li>
+                            
+                            <li><a href="services.html">服务支持</a></li>
+                            <li><a href="contact.html">联系我们</a></li>
+                        </ul>
+
+            </div>
+            
+            <div class="col-md-5 w3l-footer-top">
+                <div class="footer-img">
+                    <img src="/huaneng/Public/before/images/001.png">
+                </div>
+                <div class="footer-letter">
+                    <p>©Huaneng2017. 备案号：皖ICP备05001号-1</p>
+                </div>
+                
+                <br><br><br><br>
+            </div>
+                <div class="clearfix"></div>
+
+        </div>
+            
+        </div>
+    </div>
+
+</body>
+</html>

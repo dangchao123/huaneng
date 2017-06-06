@@ -1,0 +1,226 @@
+
+
+.name{
+	font-size: 32px;
+	font-family: '黑体';
+	margin-top: -50px;
+}
+.text{
+	padding-left: 8%;
+	background-color: #FFFFFF;
+}
+.list-text{
+	background-color: #FFFFFF;
+}
+.list-text p{
+	color: #000;
+	font-size: 24px;
+	font-weight: 600;
+
+}
+.list-text a{
+	text-decoration: none;
+}
+.text .text1{
+	margin-left: 30px;
+	font-size: 18px;
+	color: #000;
+}
+.text .text2{
+	margin-left: 30px;
+	font-size: 18px;
+	color: #86c724;
+}
+.text .text3{
+	margin-left: 45px;
+	color: #000;
+}
+.agile-prod1 .text  p{
+	font-size: 20px;
+	color: #000;
+	line-height: 1.3em;
+}
+.text a:hover{
+	text-decoration: none;
+}
+.cprz p{
+	color: #000000;
+}
+.part-one{
+	height: 125px;
+    width: 100%;
+	background-color: #F0F0F0;
+
+}
+.part-one .cprz{
+	font-size: 22px;
+	margin-top: 20px;
+}
+.part-one .pic{
+	margin-top: 20px;
+	text-align: center;
+}
+.part-one h5{
+	font-size: 16px;
+}
+.jscs p{
+	color: #000000;
+	font-size: 24px;
+}
+.part-two {
+	margin-top: 25px;
+}
+.part-two .text{
+	font-size: 17px;
+}
+.part-two .text p{
+	color: #00CC00;
+}
+.part-two p{
+	color: #000000;
+	line-height: 15px;
+}
+.zhushi{
+	color: #737373;
+}
+.wendang{
+	background-color:#F0F0F0 ;
+	margin-top: 30px;
+}
+.wdxz{
+	margin-left: 10px;
+}
+.wdxz p{
+	color: #000000;
+	font-size: 22px;
+}
+.part-three{
+	margin-top: 0px;
+	height: 100px;
+}
+.xz{
+	margin-top: 20px;
+	font-size: 16px;
+	font-family: "微软雅黑";
+}
+.xz a:link{
+	color: #000000;
+	text-decoration: none;
+}
+.xy a:visited{
+	color: #FF0000;
+	text-decoration: none;
+}
+.xz a:hover{
+	text-decoration: none;
+	color: #86c724;
+}
+.part-four{
+	margin-top: 40px;
+}
+.cpzx{
+	font-size: 25px;
+}
+.zxzx{
+	margin-top: 1.5em;
+	
+}
+.zxzx p{
+	font-size: 15px;
+	color: #000000;
+}
+.zxzx input{
+	border-radius:0px;
+}
+.exchange{
+	margin-top: 1em;
+}
+.dhzx{
+	margin-top: 10px;
+	font-size: 25px;
+}
+.xm{
+	margin-top: 20px;
+}
+.dh{
+	margin-top: 20px;
+}
+.yx{
+	margin-top: 20px;
+}
+.ly{
+	margin-top: 10%;
+	margin-left: 1.4%;
+}
+
+.submit{
+	margin-top: 2em;
+	margin-left: 6%;
+	color: #fff;
+	width: 100px;
+	height: 40px;
+	background-color: #86c724;
+	border: none;
+	
+
+}
+.phone-talk{
+	margin-top: 2em;
+}
+
+.agile-sub p{
+    color: #fff;
+    
+}
+.agile-prod1 h4 {
+    text-transform: uppercase;
+    color: #86c724;
+    font-size: 24px;
+    letter-spacing: 2px;
+    margin-bottom: 28px;
+    font-weight: 600;
+}
+
+.agile-img {
+    padding: 0;
+}
+.agile-img img{
+   width: 100%;
+}
+
+.agile-prod1 {
+    margin-top: 5em;
+}
+.agile-sub {
+    background: #212121;
+    padding:12.67% 3%;
+}
+
+@media (max-width: 1080px){
+
+.agile-prod1 p{
+    font-size: 1.1em;
+    line-height: 1.2em;
+    
+}
+.agile-sub {
+
+    padding:10.5% 3%;
+}
+.ly{
+	margin-top: 11.5%;
+}
+
+}
+@media (max-width: 991px){
+	.agile-prod1{
+		margin-top: 0;
+	}
+	.agile-img{
+		margin: 2em 0;
+	}
+	.agile-sub{
+		margin-top: -2em;
+	}
+
+}

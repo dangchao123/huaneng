@@ -1,0 +1,49 @@
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,500,700);
+
+@font-face {
+	font-weight: normal;
+	font-style: normal;
+	font-family: 'codropsicons';
+	src:url('../fonts/codropsicons/codropsicons.eot');
+	src:url('../fonts/codropsicons/codropsicons.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/codropsicons/codropsicons.woff') format('woff'),
+		url('../fonts/codropsicons/codropsicons.ttf') format('truetype'),
+		url('../fonts/codropsicons/codropsicons.svg#codropsicons') format('svg');
+}
+
+*, *:after, *:before { -webkit-box-sizing: border-box; box-sizing: border-box; }
+.clearfix:before, .clearfix:after { content: ''; display: table; }
+.clearfix:after { clear: both; }
+
+
+}
+@media screen and (max-width: 1280px) {
+	.codrops-header h1 {
+		padding: 0 0.5em;
+	}
+	.support {
+		padding: 0 1.5em;
+	}
+}
+
+@media screen and (max-width: 30em) {
+	.container > section {
+		padding: 3em 0;
+	}
+	.codrops-header {
+		padding: 2em 0 1em;
+	}
+	.codrops-header h1 {
+		font-size: 3.5em;
+	}
+}
+
+
+@media screen and (max-width: 25em) {
+	.codrops-icon {
+		font-size: 1.5em;
+	}
+	.codrops-icon span {
+		display: none;
+	}
+}

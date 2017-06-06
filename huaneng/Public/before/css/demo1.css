@@ -1,0 +1,115 @@
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,500,700);
+
+@font-face {
+	font-weight: normal;
+	font-style: normal;
+	font-family: 'codropsicons';
+	src:url('../fonts/codropsicons/codropsicons.eot');
+	src:url('../fonts/codropsicons/codropsicons.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/codropsicons/codropsicons.woff') format('woff'),
+		url('../fonts/codropsicons/codropsicons.ttf') format('truetype'),
+		url('../fonts/codropsicons/codropsicons.svg#codropsicons') format('svg');
+}
+
+*, *:after, *:before { -webkit-box-sizing: border-box; box-sizing: border-box; }
+.clearfix:before, .clearfix:after { content: ''; display: table; }
+.clearfix:after { clear: both; }
+
+.tabs .content-wrap{
+	background: #f1f1f1;
+	color: #74777b;
+	font-weight: 400;
+	font-size: 1em;
+	height: 18em;
+	font-family: 'Raleway', Arial, sans-serif;
+}
+
+a {
+	color: #909090;
+	text-decoration: none;
+	outline: none;
+}
+
+a:hover,a:focus {
+	color: #909090;
+	text-decoration: none;
+}
+
+.container > section {
+	padding: 5em 0;
+	font-size: 1.25em;
+	min-height: 100%;
+}
+
+p {
+	text-align: center;
+	padding: 1em;
+	font-size: 1em;
+}
+
+.img, .list {
+     float: left;
+}
+.list {
+
+     font-size: 0.85em;
+}
+
+ul li {
+     list-style-type: none;
+}
+h6{
+     font-size: 1.5em;
+}
+h2 {
+     text-align: center;
+}
+.divide {
+     border-top: 1px dashed #ddd;
+     padding: 25px 0 0 0;
+     width: 85%;
+}
+.circle {
+     position: absolute;
+     width: 24px;
+     height: 24px;
+     background-color: #86c724;
+     color:#fff;
+     border-radius: 50%;
+     text-align: center;
+     margin-left: -1.8em;
+}
+.list2 {
+     float: left;
+     margin:1.5em; 
+}
+@media screen and (max-width: 1280px) {
+	.codrops-header h1 {
+		padding: 0 0.5em;
+	}
+	.support {
+		padding: 0 1.5em;
+	}
+}
+
+@media screen and (max-width: 30em) {
+	.container > section {
+		padding: 3em 0;
+	}
+	.codrops-header {
+		padding: 2em 0 1em;
+	}
+	.codrops-header h1 {
+		font-size: 3.5em;
+	}
+}
+
+
+@media screen and (max-width: 25em) {
+	.codrops-icon {
+		font-size: 1.5em;
+	}
+	.codrops-icon span {
+		display: none;
+	}
+}
