@@ -114,7 +114,39 @@
     </nav>
     <section class="main-section">
         <div class="container">
-            <div class="cms cms-80 news-detail">
+            <volist name="content" id="vo">
+                <div class="cms cms-80 news-detail">
+                    <h2 class="text-center">{$vo.title}</h2>
+                    <div class="news-subheadings text-center">
+                        <span>{$vo.updatetime}</span>
+                        <span>来源：Sungrow</span>
+                        <span>访问：762</span>
+                    </div>
+                    <article>
+                        <p>
+                            {$vo.summary}
+                        </p>
+                        </br>
+                        <p align="center">
+
+                            <img src="{$vo.img}" ></p>
+                        <p>
+                           {$vo.content}
+                        </p>
+                        </br>
+                    </article>
+                    <div class="row">
+                            <div class="col-md-2"></div>
+                            <div class="col-md-10">
+                                <div class="col-md-6">上一篇：<a href="">XXXXXXXXX</a></div>
+                                <div class="col-md-6">下一篇：<a href="">%%%%%%%%%%</a></div>
+                            </div>
+                            <div class="col-md-2"></div>
+                     </div>
+
+                </div>
+            </volist>
+            <!-- <div class="cms cms-80 news-detail">
                 <h2 class="text-center">华能电源入选国家发改委28个新能源微电网示范项目名单</h2>
                 <div class="news-subheadings text-center">
                     <span>时间：2017-05-10</span>
@@ -151,7 +183,7 @@
                         <div class="col-md-2"></div>
                  </div>
 
-            </div>
+            </div> -->
         </div>
     </section>
 </main>

@@ -78,9 +78,9 @@
 					</li>
 			
 					
-					<li><a href="services.html">服务与支持</a></li>
+					<li><a href="__MODULE__/About/services.html">服务与支持</a></li>
 
-					<li><a href="contact.html">联系我们</a></li>
+					<li><a href="__MODULE__/About/contact.html">联系我们</a></li>
 				  </ul>
 				</div>
 			  </div>
@@ -166,8 +166,17 @@
 								</div>
 							</div>
 							<div class="col-md-7 what-grid1">
+								<volist name="news" id="vo">
+									<div class="news">
+											<h4><a href="__MODULE__/News/content/id/{$vo.id}">{$vo.title}</a></h4>
+											<p>{$vo.summary}</p>
+										    <i class="fa fa-clock-o" aria-hidden="true">&nbsp;{$vo.updatetime}</i>
+										    <i class="fa fa-eye" aria-hidden="true">&nbsp;255</i>									    
+										<div class="clearfix"></div>
+									</div>
+								</volist>
 								
-								<div class="news">
+								<!-- <div class="news">
 									
 										<h4><a href="新闻内容.html">臻于至善 领跑未来——华能电源新品发布会点亮SNEC</a></h4>
 										<p>2017年4月19日，在全球光伏盛会SNEC2017首日，全球光伏逆变领跑者华能电源隆重举行了“臻于至善 领跑未来——华能电源2017新品发布会”。华能电源董事长、中国可再生能源学会秘书长、业内领导、公司合作伙伴及媒体人士等数百人出席了本次发布会，共同见证了华能电源六款新品震撼面世。</p>
@@ -184,12 +193,12 @@
 										<i class="fa fa-clock-o" aria-hidden="true">&nbsp;2017-04-25</i>
 									    <i class="fa fa-eye" aria-hidden="true">&nbsp;255</i>
 									<div class="clearfix"></div>
-								</div>
+								</div> -->
 
 							</div>
 							<div class="clearfix"></div>
 						</div>
-                        <h5 ><a style="text-deriction:none;" href="公司新闻.html">更多>></a></h5>
+                        <h5 ><a style="text-deriction:none;" href="__MODULE__/News/companynews.html">更多>></a></h5>
 					</div>
 				</div>
 			<!--新闻-->
@@ -197,15 +206,14 @@
 			<div class="w3layouts-clients">
 				<div class="container">
 					<h3> 展会及活动<span></span></h3>
-					<h4><a href="展会活动.html">德国 • 新慕尼黑太阳能技术博览会（Intersolar Europe 2017）</a></h4>
-					<p>2017.05.31-06.02</p>
-					<p>德国 • 新慕尼会展中心</p>
+					<volist name="active" id="active">	
+					<h4><a href="展会活动.html">{$active.title}</a></h4>
+					<p>{$active.time}</p>
+					<p>{$active.address}</p>
 					<br><br>
-					<h4><a href="展会活动.html">2017年北京国际风能大会暨展览会（CWP 2017）</a></h4>
-					<p>2017.10.17-19</p>
-					<p>中国国际展览中心新馆（北京市天竺裕翔路88号 • 新国展）</p>
-					<br>
-					<h5><a href="展会活动.html">更多>></a></h5>
+					</volist>
+					<h5><a href="__MODULE__/Active/Active.html">更多>></a></h5>
+
 
 				</div>
 			</div>
@@ -224,7 +232,7 @@
 							<img src="__PUBLIC__/before/images/介绍.jpg" class="img-responsive" alt="">
 							<div class="textbox"></div>
 						</div>
-						<h4><a href="公司介绍.html">公司介绍</a></h4>						
+						<h4><a href="__MODULE__/About/summary.html">公司介绍</a></h4>						
 					</div>
 				</div>
 				<div class="col-sm-4 rides-grid">
@@ -233,7 +241,7 @@
 							<img src="__PUBLIC__/before/images/文化.jpg" class="img-responsive" alt="">
 							<div class="textbox"></div>
 						</div>
-						<h4><a href="企业文化.html">企业文化</a></h4>						
+						<h4><a href="__MODULE__/About/culture.html">企业文化</a></h4>						
 					</div>
 				</div>
 				<div class="col-sm-4 rides-grid">
@@ -242,7 +250,7 @@
 							<img src="__PUBLIC__/before/images/历程.jpg" class="img-responsive" alt="">
 							<div class="textbox"></div>
 						</div>
-						<h4><a href="发展历程.html">发展历程</a></h4>						
+						<h4><a href="__MODULE__/About/develop.html">发展历程</a></h4>						
 					</div>
 				</div>
 				<div class="clearfix"> </div>
@@ -262,12 +270,12 @@
 			<div class="col-md-3 w3ls-footer-top">
 				<h3>快速<span>链接</span></h3>
 						<ul>
-							<li><a href="index.html">首页</a></li>
+							<li><a href="">首页</a></li>
 							<li><a href="产品列表.html">产品列表</a></li>
 							<li><a href="方案列表.html">解决方案</a></li>
 							
-							<li><a href="services.html">服务支持</a></li>
-							<li><a href="contact.html">联系我们</a></li>
+							<li><a href="__MODULE__/About/services.html">服务支持</a></li>
+							<li><a href="__MODULE__/About/contact.html">联系我们</a></li>
 						</ul>
 
 			</div>

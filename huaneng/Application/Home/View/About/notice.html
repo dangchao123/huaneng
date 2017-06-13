@@ -2,10 +2,13 @@
 <html lang="en">
 <head>
 <title>公司公告</title>    
-<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all" />     
-<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all" />
-<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
-<link href="css/slider.css" rel="stylesheet" type="text/css" media="all" />
+<html lang="en">
+<head>
+<title>首页</title>
+<link href="__PUBLIC__/before/css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all" />     
+<link href="__PUBLIC__/before/css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all" />
+<link href="__PUBLIC__/before/css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="__PUBLIC__/before/css/slider.css" rel="stylesheet" type="text/css" media="all" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <script type="application/x-javascript">
     addEventListener("load", function() {
@@ -15,10 +18,40 @@
        	  window.scrollTo(0,1);
      } 
  </script>
-<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
-<script type="text/javascript" src="js/nav.js"></script>
-<script type="text/javascript" src="js/slider.js"></script>
-<script src="js/bootstrap.js"></script>
+<script type="text/javascript" src="__PUBLIC__/before/js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/before/js/nav.js"></script>
+<script type="text/javascript" src="__PUBLIC__/before/js/slider.js"></script>
+<script src="__PUBLIC__/before/js/bootstrap.js"></script>
+<style type="text/css">
+   .list-page .current {
+    margin: 0 5px;
+    padding: 4px 7px;
+    background: #86c724;
+    border: 1px solid #ccc;
+    color: #fff;
+}
+
+
+.list-page {
+	margin-top: 40px;
+    padding: 20px 0;
+    text-align: center;
+}
+.list-page a {
+    margin: 0 5px;
+    padding: 4px 7px;
+    border: 1px solid #ccc;
+    background: #fff;
+    color: #86c724;
+    text-decoration: none;
+
+}
+
+
+
+
+
+</style>
 </head>
 <body>
 <!-- header -->
@@ -54,7 +87,7 @@
 				<!-- 导航栏 -->
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				  <ul class="nav navbar-nav">
-					<li><a  href="index.html">首 页</a></li>
+					<li><a class="active" href="index.html">首 页</a></li>
 					<li class="dropdown">
 						<a href="产品列表.html">产品中心<span class="caret"></span></a>
 						<ul class="dropdown-menu">
@@ -113,28 +146,24 @@
     </div>
     <!-- 面包屑+小导航结束 -->
     <div class="notice">
+        
+      
         <div class="container">
-        	<div class='nt col-md-6'>
+          <volist name="notice" id="notice">	
+        	<div class='nt col-md-6'style="margin-top:3em;">
                 <div class="nt-icons col-md-1">
                 	<span class="fa  fa-file-text-o" aria-hidden="true"></span>
                 </div>
                 <div class="nt-text col-md-11">
+                	<h4><a href="__PUBLIC__/before/">{$notice.title}</a></h4>
+                	<p>{$notice.updatetime}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>{$notice.size}KB|{$notice.type}</span></p>
+                </div>
+        	</div>
+        </volist>
+        	
+        </div>
 
-                	<h4><a href="华能.docx">华能电源：第二届董事会第二十五次会议决议公告</a></h4>
-                	<p>2016-8-5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>123.86KB|DOCX</span></p>
-                </div>
-        	</div>
-        	<div class='nt col-md-6'>
-                <div class="nt-icons col-md-1">
-                	<span class="fa  fa-file-text-o" aria-hidden="true"></span>
-                </div>
-                <div class="nt-text col-md-11">
-                	<h4><a href="华能.docx">华能电源：第二届董事会第二十五次会议决议公告</a></h4>
-                	<p>2016-08-05&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>123.86KB|DOCX</span></p>
-                </div>
-        	</div>
-        </div>
-        <div class="container">
+      <!--   <div class="container">
         	<div class='nt col-md-6'>
                 <div class="nt-icons col-md-1">
                 	<span class="fa  fa-file-text-o" aria-hidden="true"></span>
@@ -173,41 +202,11 @@
                 	<p>2016-08-05&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>123.86KB|DOCX</span></p>
                 </div>
         	</div>
-        </div>
-        <div class="container">
-        	<div class='nt col-md-6'>
-                <div class="nt-icons col-md-1">
-                	<span class="fa  fa-file-text-o" aria-hidden="true"></span>
-                </div>
-                <div class="nt-text col-md-11">
-                	<h4><a href="华能.docx">华能电源：第二届董事会第二十五次会议决议公告</a></h4>
-                	<p>2016-8-5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>123.86KB|DOCX</span></p>
-                </div>
-        	</div>
-        	<div class='nt col-md-6'>
-                <div class="nt-icons col-md-1">
-                	<span class="fa  fa-file-text-o" aria-hidden="true"></span>
-                </div>
-                <div class="nt-text col-md-11">
-                	<h4><a href="华能.docx">华能电源：第二届董事会第二十五次会议决议公告</a></h4>
-                	<p>2016-08-05&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>123.86KB|DOCX</span></p>
-                </div>
-        	</div>
-        </div>
+        </div> -->
     </div>
-    <div class="nt-nav">
-                   <nav>
-						<ul class="pagination">
-							<li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">«</span></a></li>
-							<li><a class="active"href="#">1 </a></li>
-							<li><a href="#">2</a></li>
-							<li><a href="#">3</a></li>
-							<li><a href="#">4</a></li>
-							<li><a href="#">5</a></li>
-							<li><a href="#" aria-label="Next"><span aria-hidden="true">»</span></a></li>
-						</ul>
-					</nav>
-    </div>
+   
+                   <div class="list-page"> {$page}</div>
+
 
 <!-- footer -->
 	<div class="footer-top">
@@ -234,7 +233,7 @@
 			
 			<div class="col-md-5 w3l-footer-top">
 				<div class="footer-img">
-					<img src="images/001.png">
+					<img src="__PUBLIC__/before/images/001.png">
 				</div>
 				<div class="footer-letter">
 					<p>©Huaneng2017. 备案号：皖ICP备05001号-1</p>
