@@ -27,7 +27,7 @@
         <div class="top">
             <div class="container">
                 <div class="logo">
-                    <h1><a href="index.html">华能<span>电源 </span></a></h1>
+                    <h1><a href="/huaneng/index.php/Home/Index/index.html">华能<span>电源 </span></a></h1>
                 </div>
                 <div class="agileits-contact-info text-right">
                     <ul>
@@ -55,33 +55,32 @@
                 <!-- 导航栏 -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                   <ul class="nav navbar-nav">
-                    <li><a  href="index.html">首 页</a></li>
+                    <li><a  href="/huaneng/index.php/Home/Index/index.html">首 页</a></li>
                     <li class="dropdown">
-                        <a href="产品列表.html">产品中心<span class="caret"></span></a>
+                        <a href="/huaneng/index.php/Home/Product/productlist1.html">产品中心<span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                          <li><a href="产品列表.html">光伏逆变器</a></li>                          
-                          <li><a href="产品列表.html">风能变流器</a></li>
-                          <li><a href="产品列表.html">储能系统</a></li>
-                          <li><a href="产品列表.html">新能源汽车驱动系统</a></li>
+                          <li><a href="/huaneng/index.php/Home/Product/productlist1.html">光伏逆变器</a></li>
+                          <li><a href="/huaneng/index.php/Home/Product/productlist2.html">风能变流器</a></li>
+                          <li><a href="/huaneng/index.php/Home/Product/productlist3.html">储能系统</a></li>
+                          <li><a href="/huaneng/index.php/Home/Product/productlist4.html">新能源汽车驱动系统</a></li>
                         
                       </ul>
                     </li>
                     <li class="dropdown">
-                        <a href="方案列表.html">解决方案<span class="caret"></span></a>
+                        <a href="/huaneng/index.php/Home/Project/Projectlist1.html">解决方案<span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                          <li><a href="方案内容1.html">光伏逆变器</a></li>
-                          
-                          <li><a href="方案内容2.html">电站系统</a></li>
-                          <li><a href="方案内容1.html">储能系统</a></li>
-                          <li><a href="方案内容1.html">新能源汽车驱动系统</a></li>
+                          <li><a href="/huaneng/index.php/Home/Project/Projectlist1.html">光伏逆变器</a></li>
+                          <li><a href="/huaneng/index.php/Home/Project/Projectlist2.html">电站系统</a></li>
+                          <li><a href="/huaneng/index.php/Home/Project/Projectlist3.html">储能系统</a></li>
+                          <li><a href="/huaneng/index.php/Home/Project/Projectlist4.html">新能源汽车驱动系统</a></li>
                           
                       </ul>
                     </li>
             
                     
-                    <li><a href="services.html">服务与支持</a></li>
+                    <li><a href="/huaneng/index.php/Home/About/services.html">服务与支持</a></li>
 
-                    <li><a href="contact.html">联系我们</a></li>
+                    <li><a href="/huaneng/index.php/Home/About/contact.html">联系我们</a></li>
                   </ul>
                 </div>
               </div>
@@ -97,7 +96,7 @@
 		<div class="container">
 			<div class="breadcrumb1">				
 				<ol class="breadcrumb">
-					<li><a href="index.html">首页</a></li>
+					<li><a href="/huaneng/index.php/Home/Index/index.html">首页</a></li>
 					<li class="active">展会活动</li>
 				</ol>
 			</div>
@@ -105,46 +104,26 @@
     </div>
     <!-- 面包屑+小导航结束 -->
 	
-    <div class="overview w3-2">
+<div class="overview w3-2">
 	   <div class="container">
 			
 		   <div class="overview-grids">
-
-            <div class="col-md-4 list-grid2">
+            <?php if(is_array($active)): $i = 0; $__LIST__ = $active;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$active): $mod = ($i % 2 );++$i;?><div class="col-md-4 list-grid2"style="margin-top:3em;">
                 <div class="list-img">
-                    <a href="新闻内容.html">   <img  src="/huaneng/Public/before/images/56cff0721b859.gif"class="img-responsive" alt=" "></a>
-                    <div class="textbox"></div>
+                    <a><img  src="/huaneng/Public/<?php echo ($active["img"]); ?>"class="img-responsive" alt=" "style="width:283px;height:159px;"></a>
+            
                 </div>
 
-                <h4>德国慕尼黑太阳能技术博览会</h4>
-                <span>时间：2017.04.19-21</span></br>
-                <span>地点：浦东新区龙阳路2345号</span>
-            </div>
+                <h4 style="font-size:20px;font-weight: 300;"><?php echo ($active["title"]); ?></h4>
+                <span style="color:#777;">时间：<?php echo ($active["time"]); ?></span></br>
+                <span style="color:#777;">地点：<?php echo ($active["address"]); ?></span>
+            </div><?php endforeach; endif; else: echo "" ;endif; ?>
 
-            <div class="col-md-4 list-grid2">
-                <div class="list-img">
-                    <img src="/huaneng/Public/before/images/56e0d39ab519b.jpg" class="img-responsive" alt=" ">
-                    <div class="textbox"></div>
-                </div>
-
-                <h4>德国慕尼黑太阳能技术博览会</h4>
-                <span>时间：2017.04.19-21</span></br>
-                <span>地点：浦东新区龙阳路2345号</span>
-            </div>
-
-            <div class="col-md-4 list-grid2">
-                <div class="list-img">
-                    <img src="/huaneng/Public/before/images/56e0dd0ba48ec.jpg" class="img-responsive" alt=" ">
-                    <div class="textbox"></div>
-                </div>
-                <h4>德国慕尼黑太阳能技术博览会</h4>
-                <span>时间：2017.04.19-21</span></br>
-                <span>地点：浦东新区龙阳路2345号</span>
-            </div>
+            
         </div>
         
 		</div>
-	</div>
+</div>
 
 
 	 <div class="overview w3-2">
@@ -154,71 +133,28 @@
             </div>
             <br>
             <div class="overview-grids">
-
-                <div class="col-md-6 list-grid3">
+             <?php if(is_array($activeago)): $i = 0; $__LIST__ = $activeago;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$activeago): $mod = ($i % 2 );++$i;?><div class="col-md-6 list-grid3">
                     <div class="col-md-4">
-                        <a href="新闻内容.html">   <img src="/huaneng/Public/before/images/56e0d39ab519b.jpg" class="img-responsive" alt=" "></a>
-                        <div class="textbox"></div>
+                        <a >   <img src="/huaneng/Public/<?php echo ($activeago["img"]); ?>" class="img-responsive" alt=" "style="width:130px;height:80px;"></a>
+                   
                     </div>
 
                     <div class=" act col-md-8 ">
-                        <a href="新闻内容.html">  <h4>2017年美国拉斯维加斯..</h4></a>
+                      <h4 style="font-size:20px;font-weight: 300;"><?php echo ($activeago["title"]); ?></h4>
                         <div class="teaser">
-                        <span>时间：2017.04.19-21</span></br>
-                        <span>地点：浦东新区龙阳路2345号</span>
+                        <span>时间：<?php echo ($activeago["time"]); ?></span></br>
+                        <span>地点：<?php echo ($activeago["address"]); ?></span>
                         </div>
                     </div>
-                </div>
+                </div><?php endforeach; endif; else: echo "" ;endif; ?>
 
-                <div class="col-md-6 list-grid3">
-                    <div class="col-md-4 ">
-                        <a href="新闻内容.html">   <img src="/huaneng/Public/before/images/56e0d39ab519b.jpg" class="img-responsive" alt=" "></a>
-                        <div class="textbox"></div>
-                    </div>
-                    <div class=" act col-md-8 ">
-                        <a href="新闻内容.html">  <h4>2017年美国拉斯维加斯..</h4></a>
-                        <span>时间：2017.04.19-21</span></br>
-                        <span>地点：浦东新区龙阳路2345号</span>
-                    </div>
-                </div>
-                <div class="col-md-6 list-grid3">
-                    <div class="col-md-4">
-                        <a href="新闻内容.html">   <img src="/huaneng/Public/before/images/56e0d39ab519b.jpg" class="img-responsive" alt=" "></a>
-                        <div class="textbox"></div>
-                    </div>
-                    <div class=" act col-md-8 ">
-                        <a href="新闻内容.html">  <h4>2017年美国拉斯维加斯..</h4></a>
-                        <div class="teaser">
-                            <span>时间：2017.04.19-21</span></br>
-                            <span>地点：浦东新区龙阳路2345号</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 list-grid3">
-                    <div class="col-md-4 ">
-                        <a href="新闻内容.html">   <img src="/huaneng/Public/before/images/56e0d39ab519b.jpg" class="img-responsive" alt=" "></a>
-                        <div class="textbox"></div>
-                    </div>
-                    <div class=" act col-md-8 ">
-                        <a href="新闻内容.html">  <h4>2017年美国拉斯维加斯..</h4></a>
-                        <span>时间：2017.04.19-21</span></br>
-                        <span>地点：浦东新区龙阳路2345号</span>
-                    </div>
-                </div>
+                
+                
+                
 
             </div>
         </div>
-         <nav style="text-align: center;margin-top:6em;">
-        <ul class="pagination">
-            <li><a href="#" aria-label="Previous"><span aria-hidden="true">«</span></a></li>
-            <li><a href="#">1</a></li>
-            <li><a href="#">2</a></li>
-            <li><a href="#">3</a></li>
-            <li><a href="#">4</a></li>
-            <li><a href="#">5</a></li>
-            <li><a href="#" aria-label="Next"><span aria-hidden="true">»</span></a></li>
-        </ul>
-    </nav>
+         
     </div>
 
 
@@ -228,7 +164,7 @@
 	<div class="footer-top">
 		<div class="container">
 			<div class="col-md-4 wthree-footer-top">
-				<h3><a href="index.html">华能<span>电源</span></a></h3>
+				<h3><a href="/huaneng/index.php/Home/Index/index.html">华能<span>电源</span></a></h3>
 					<ul>
 						<li><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span><a href="mailto:info@example.com">mail@example.com</a></li>
 						<li><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>+080 264 995</li>
@@ -237,19 +173,19 @@
 			<div class="col-md-3 w3ls-footer-top">
 				<h3>快速<span>链接</span></h3>
 						<ul>
-							<li><a href="index.html">首页</a></li>
-							<li><a href="产品列表.html">产品</a></li>
-							<li><a href="方案列表.html">解决方案</a></li>
+							<li><a href="/huaneng/index.php/Home/Index/index.html">首页</a></li>
+							<li><a href="/huaneng/index.php/Home/Product/product1.html">产品</a></li>
+							<li><a href="/huaneng/index.php/Home/Project/project1.html">解决方案</a></li>
 							
-							<li><a href="services.html">服务支持</a></li>
-							<li><a href="contact.html">联系我们</a></li>
+							<li><a href="/huaneng/index.php/Home/About/services.html">服务支持</a></li>
+							<li><a href="/huaneng/index.php/Home/About/contact.html">联系我们</a></li>
 						</ul>
 
 			</div>
 			
 			<div class="col-md-5 w3l-footer-top">
 				<div class="footer-img">
-					<img src="images/001.png">
+					<img src="/huaneng/Public/before/images/001.png">
 				</div>
 				<div class="footer-letter">
 					<p>©Huaneng2017. 备案号：皖ICP备05001号-1</p>

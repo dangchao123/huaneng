@@ -1,0 +1,38 @@
+<extend name="Public/base" />
+<block name="main">
+  <div class="crumb-wrap">
+            <div class="crumb-list"><i class="icon-font"></i><a href="__MODULE__/Index/index.html">首页</a><span class="crumb-step">&gt;</span><a class="crumb-name" href="__MODULE__/Notice/allNotice.html">公司公告</a><span class="crumb-step">&gt;</span><span>编辑公告</span></div>
+        </div>
+        <div class="result-wrap">
+            <div class="result-content">
+                <form role="form" action="" method="post" enctype="multipart/form-data">
+                    <table class="insert-tab" width="100%">
+                        <tbody>
+                            <tr>
+                                <th><i class="require-red">*</i>标题：</th>
+                                <td>
+                                    <input class="common-text required" id="title" name="title" size="50" value="{$notice.title}" type="text">
+                                </td>
+                            </tr>
+                           
+                            
+                            <tr>
+                                <th>上传：</th>
+                                <td><form>
+                                    <input type="file" name="file">
+                                </form></td>
+                            </tr>
+                            <tr>
+                                <th></th>
+                                <td>
+                                    <input class="btn btn-primary btn6 mr10" value="提交" type="submit"
+                                    name="submit">
+                                    <input class="btn btn6" onclick="history.go(-1)" value="返回" type="button">
+                                </td>
+                            </tr>
+                        </tbody></table>
+                </form>
+            </div>
+        </div>
+
+</block>

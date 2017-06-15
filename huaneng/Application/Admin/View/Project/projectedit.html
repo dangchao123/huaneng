@@ -1,0 +1,86 @@
+<extend name="Public/base" />
+<block name="main">
+  <div class="crumb-wrap">
+            <div class="crumb-list"><i class="icon-font"></i><a href="__MODULE__/Index/index.html">首页</a><span class="crumb-step">&gt;</span><a class="crumb-name" href="__MODULE__/Project/allProgects.html">方案管理</a><span class="crumb-step">&gt;</span><span>编辑方案</span></div>
+        </div>
+        <div class="result-wrap">
+            <div class="result-content">
+                <form role="form" action="" method="post" enctype="multipart/form-data">
+                    <table class="insert-tab" width="100%">
+                        <tbody>
+                            <tr>
+                                <th width="120"><i class="require-red">*</i>分类：</th>
+                                <td>
+                                    
+                                    <input class="common-text required" id="title" name="type" size="50" value="{$project.type}" type="text">
+                                
+                                </td>
+                            </tr>
+                            <tr>
+                                <th width="120"><i class="require-red">*</i>方案种类：</th>
+                            
+                                    <td>
+                                    <input class="common-text required" id="title" name="category" size="50" value="{$project.category}" type="text">
+                                
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>方案图片：</th>
+                                <td>
+                                    <img src="__PUBLIC__/{$project.img}"  width="253px" height="165px" name="img"/>
+                                    <input class="common-text required" id="title" name="img" size="50" value="{$project.img}" type="file">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><i class="require-red">*</i>方案名称：</th>
+                                <td>
+                                    <input class="common-text required" id="title" name="name" size="50" value="{$project.name}" type="text">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><i class="require-red"></i>方案介绍（应用场景）：</th>
+                                <td><textarea name="summary" class="common-textarea" id="summary" cols="30" style="width: 98%;" rows="10">{$project.summary}</textarea></td>
+                            </tr>
+                            <tr>
+                                <th><i class="require-red">*</i>概述：</th>
+                                <td><textarea name="content" class="common-textarea" id="content" cols="30" style="width: 98%;" rows="10">{$project.content}</textarea></td>
+                            </tr>
+                            <tr>
+                                <th><i class="require-red"></i>特色优势一：</th>
+                                <td><textarea name="featureone" class="common-textarea" id="feature" cols="30" style="width: 98%;" rows="10">{$project.featureone}</textarea></td>
+                            </tr>
+                            <tr>
+                                <th><i class="require-red"></i>特色优势二：</th>
+                                <td><textarea name="featuretwo" class="common-textarea" id="feature" cols="30" style="width: 98%;" rows="10">{$project.featuretwo}</textarea></td>
+                            </tr>
+                            <tr>
+                                <th><i class="require-red"></i>特色优势三：</th>
+                                <td><textarea name="featurethree" class="common-textarea" id="feature" cols="30" style="width: 98%;" rows="10">{$project.featurethree}</textarea></td>
+                            </tr>
+                            <tr>
+                                <th><i class="require-red"></i>特色优势四：</th>
+                                <td><textarea name="featurefour" class="common-textarea" id="feature" cols="30" style="width: 98%;" rows="10">{$project.featurefour}</textarea></td>
+                            </tr>
+                            <tr>
+                                <th>系统结构图：</th>
+                                <td>
+                                    <img src="__PUBLIC__/{$project.photo}"  width="253px" height="165px" name="img"/>
+                                    <input class="common-text required" id="title" name="photo" size="50" value="" type="file">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>备注：</th>
+                                <td><textarea name="remark" class="common-textarea" id="remark" cols="30" style="width: 98%;" rows="10">{$project.remark}</textarea></td>
+                            </tr>
+                            <tr>
+                                <th></th>
+                                <td>
+                                    <input class="btn btn-primary btn6 mr10" value="提交" name="submit" type="submit">
+                                    <input class="btn btn6" onclick="history.go(-1)" value="返回" type="button">
+                                </td>
+                            </tr>
+                        </tbody></table>
+                </form>
+            </div>
+        </div>
+</block>

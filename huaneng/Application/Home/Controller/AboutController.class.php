@@ -32,6 +32,7 @@ class AboutController extends Controller {
         $this->display();
        
     }
+   
     public function services(){
         $this->display();
     }

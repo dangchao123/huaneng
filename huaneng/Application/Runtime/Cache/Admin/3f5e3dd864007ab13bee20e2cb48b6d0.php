@@ -2,27 +2,47 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>后台管理</title>
+    <title></title>
     <link rel="stylesheet" type="text/css" href="/huaneng/Public/after/css/common.css"/>
     <link rel="stylesheet" type="text/css" href="/huaneng/Public/after/css/main.css"/>
     <script type="text/javascript" src="/huaneng/Public/after/js/libs/modernizr.min.js"></script>
+    <style type="text/css">
+    .sidebar-list input[type=checkbox] {
+      /* hide native checkbox */
+      position: absolute;
+      opacity: 0;
+    }
+    .sidebar-list label, .sidebar-list a {
+      position: relative;
+      display: block;
+    }   
+    .sidebar-list ul {
+      display: none;
+    }
+ 
+    .sidebar-list input[type=checkbox]:checked + label + ul,
+    .sidebar-list input[type=checkbox]:checked + label:nth-of-type(n) + ul {
+      display: block;
+    }    
+
+
+    </style>
 </head>
 <body>
 <div class="topbar-wrap white">
     <div class="topbar-inner clearfix">
         <div class="topbar-logo-wrap clearfix">
-            <h1 class="topbar-logo none"><a href="index.html" class="navbar-brand">后台管理</a></h1>
-            <ul class="navbar-list clearfix">
-                <li><a class="on" href="index.html">首页</a></li>
-                
-            </ul>
+            <h1 class="topbar-logo none"><a href="/huaneng/index.php/Admin/Index/index.html" class="navbar-brand">后台管理</a></h1>
+            
         </div>
         <div class="top-info-wrap">
             <ul class="top-info-list clearfix">
-                <li><a href="">管理员</a></li>
-                <li><a href="">退出</a></li>
+                <li><a href=""><?php echo ($_SESSION['name']); ?></a></li>
+                <li><a href="<?php echo U(Admin/Admin/logout);?>">退出</a></li>
             </ul>
+            
         </div>
+
     </div>
 </div>
 <div class="container clearfix">
@@ -32,44 +52,50 @@
         </div>
         <div class="sidebar-content">
             <ul class="sidebar-list">
-                <li>
-                    <a href="allAdministrator.html"><i class="icon-font">&#xe014;</i>管理员管理</a>
+                <li class="menu">
+                    <input type="checkbox" name ="group-1" id="group-1">
+                    <label for="group-1"><a><i class="icon-font">&#xe014;</i>管理员管理</a></label>
                     <ul class="sub-menu">
-                        <li><a href="allAdministrator.html"><i class="icon-font">&#xe003;</i>所有管理员</a></li>
-                        <li><a href="addAdministrator.html"><i class="icon-font">&#xe026;</i>添加管理员</a></li>
+                        <li><a href="/huaneng/index.php/Admin/Administrator/allAdministrator.html"><i class="icon-font">&#xe003;</i>所有管理员</a></li>
+                        <li><a href="/huaneng/index.php/Admin/Administrator/addAdministrator.html"><i class="icon-font">&#xe026;</i>添加管理员</a></li>
                     </ul>
                 </li>
-                <li>
-                    <a href="#"><i class="icon-font">&#xe005;</i>产品管理</a>
+
+                <li class="menu">
+                    <input type="checkbox" name ="group-2" id="group-2">
+                    <label for="group-2"><a><i class="icon-font">&#xe005;</i>产品管理</a></label>
                     <ul class="sub-menu">
-                        <li><a href="allProducts.html"><i class="icon-font">&#xe005;</i>所有产品</a></li>
-                        <li><a href="addProduct.html"><i class="icon-font">&#xe026;</i>添加产品</a></li>
-                        <li><a href="consult.html"><i class="icon-font">&#xe012;</i>产品咨询</a></li>
+                        <li><a href="/huaneng/index.php/Admin/Product/allProducts.html"><i class="icon-font">&#xe005;</i>所有产品</a></li>
+                        <li><a href="/huaneng/index.php/Admin/Product/addProduct.html"><i class="icon-font">&#xe026;</i>添加产品</a></li>
+                        <li><a href="/huaneng/index.php/Admin/Product/consult.html"><i class="icon-font">&#xe012;</i>产品咨询</a></li>
                     </ul>
                 </li>
-                <li>
-                    <a href="#"><i class="icon-font">&#xe034;</i>新闻管理</a>
+                <li class="menu">
+                    <input type="checkbox" name ="group-3" id="group-3">
+                    <label for="group-3"><a><i class="icon-font">&#xe048;</i>新闻管理</a></label>
                     <ul class="sub-menu">
-                        <li><a href="allCompanynews.html"><i class="icon-font">&#xe048;</i>所有公司新闻<li><a href="addCompanynews.html"><i class="icon-font">&#xe026;</i>添加公司新闻</a></li>
-                        <li><a href="allMediannews.html"><i class="icon-font">&#xe048;</i>所有媒体新闻</a></li>
-                        <li><a href="addMediannews.html"><i class="icon-font">&#xe026;</i>添加媒体新闻</a></li>
+                        <li><a href="/huaneng/index.php/Admin/News/allCompanynews.html"><i class="icon-font">&#xe048;</i>所有公司新闻<li><a href="/huaneng/index.php/Admin/News/addCompanynews.html"><i class="icon-font">&#xe026;</i>添加公司新闻</a></li>
+                        <li><a href="/huaneng/index.php/Admin/News1/allMediannews.html"><i class="icon-font">&#xe048;</i>所有媒体新闻</a></li>
+                        <li><a href="/huaneng/index.php/Admin/News1/addMediannews.html"><i class="icon-font">&#xe026;</i>添加媒体新闻</a></li>
                         
-                        <li><a href="allActive.html"><i class="icon-font">&#xe048;</i>所有展会活动</a></li>
-                        <li><a href="addActive.html"><i class="icon-font">&#xe026;</i>添加展会活动</a></li>
+                        <li><a href="/huaneng/index.php/Admin/Active/allActive.html"><i class="icon-font">&#xe048;</i>所有展会活动</a></li>
+                        <li><a href="/huaneng/index.php/Admin/Active/addActive.html"><i class="icon-font">&#xe026;</i>添加展会活动</a></li>
                     </ul>
                 </li>
-                <li>
-                    <a href="#"><i class="icon-font">&#xe005;</i>解决方案</a>
+                <li class="menu">
+                    <input type="checkbox" name ="group-4" id="group-4">
+                    <label for="group-4"><a><i class="icon-font">&#xe005;</i>解决方案</a></label>
                     <ul class="sub-menu">
-                        <li><a href="allProjects.html"><i class="icon-font">&#xe005;</i>所有方案</a></li>
-                        <li><a href="addProject.html"><i class="icon-font">&#xe026;</i>添加方案</a></li>
+                        <li><a href="/huaneng/index.php/Admin/Project/allProjects.html"><i class="icon-font">&#xe005;</i>所有方案</a></li>
+                        <li><a href="/huaneng/index.php/Admin/Project/addProject.html"><i class="icon-font">&#xe026;</i>添加方案</a></li>
                     </ul>
                 </li>
-               <li>
-                <a href="#"><i class="icon-font">&#xe043;</i>公司公告</a>
+               <li class="menu">
+                <input type="checkbox" name ="group-5" id="group-5">
+                    <label for="group-5"><a><i class="icon-font">&#xe043;</i>公司公告</a></label>
                 <ul class="sub-menu">
-                    <li><a href="allNotice.html"><i class="icon-font">&#xe043;</i>所有公告</a></li>
-                    <li><a href="addNotice.html"><i class="icon-font">&#xe026;</i>添加公告</a></li>
+                    <li><a href="/huaneng/index.php/Admin/Notice/allNotice.html"><i class="icon-font">&#xe043;</i>所有公告</a></li>
+                    <li><a href="/huaneng/index.php/Admin/Notice/addNotice.html"><i class="icon-font">&#xe026;</i>添加公告</a></li>
                 </ul>
             </li>
             </ul>
@@ -77,26 +103,17 @@
     </div>
     <!--/sidebar-->
     <div class="main-wrap">
-
-        <div class="crumb-wrap">
-            <div class="crumb-list"><i class="icon-font"></i><a href="index.html">首页</a><span class="crumb-step">&gt;</span><span class="crumb-name">方案管理</span></div>
+        
+  <div class="crumb-wrap">
+            <div class="crumb-list"><i class="icon-font"></i><a href="/huaneng/index.php/Admin/Index/index.html">首页</a><span class="crumb-step">&gt;</span><span class="crumb-name">方案管理</span></div>
         </div>
         <div class="search-wrap">
             <div class="search-content">
-                <form action="/jscss/admin/design/index" method="post">
+                <form action="" method="get">
                     <table class="search-tab">
                         <tr>
-                            <th width="120">选择分类:</th>
-                            <td>
-                                <select name="search-sort" id="">
-                                    <option value="">全部</option>
-                                    <option value="19">光伏逆变器</option>
-                                    <option value="20">风能逆变器</option>
-                                    <option value="19">储能系统</option>
-                                    <option value="20">新能源汽车系统</option>
-                            </td>
                             <th width="70">关键字:</th>
-                            <td><input class="common-text" placeholder="关键字" name="keywords" value="" id="" type="text"></td>
+                            <td><input class="common-text" placeholder="关键字" name="search" value="" id="" type="text"></td>
                             <td><input class="btn btn-primary btn2" name="sub" value="查询" type="submit"></td>
                         </tr>
                     </table>
@@ -107,9 +124,8 @@
             <form name="myform" id="myform" method="post">
                 <div class="result-title">
                     <div class="result-list">
-                        <a href="addProduct.html"><i class="icon-font"></i>新增方案</a>
-                        <a id="batchDel" href="javascript:void(0)"><i class="icon-font"></i>批量删除</a>
-                        <a id="updateOrd" href="javascript:void(0)"><i class="icon-font"></i>更新排序</a>
+                        <a href="/huaneng/index.php/Admin/Project/addProject.html"><i class="icon-font"></i>新增方案</a>
+                        
                     </div>
                 </div>
                 <div class="result-content">
@@ -118,84 +134,45 @@
                             <th class="tc" width="5%"><input class="allChoose" name="" type="checkbox"></th>
                             <th>排序</th>
                             <th>ID</th>
-                            <th>方案种类</th>
-                            <th>方案图片</th>
+                            <th>分类</th>
+                            <th>方案种类</th>                           
                             <th>方案名称</th>
-                            <th>方案介绍</th>
-                            <th>概述</th>
-                            <th>特色优势</th>
-                            <th>系统结构图</th>
-                            <th>备注</th>
+                            
+                                                                                  
+                            <th>添加时间</th>
+                            <th>更新时间</th>
                             <th>操作</th>
                         </tr>
-                        <tr>
+                        <?php if(is_array($project)): $i = 0; $__LIST__ = $project;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$project): $mod = ($i % 2 );++$i;?><tr>
                             <td class="tc"><input name="id[]" value="59" type="checkbox"></td>
                             <td>
                                 <input name="ids[]" value="59" type="hidden">
                                 <input class="common-input sort-input" name="ord[]" value="0" type="text">
                             </td>
-                            <td>5</td>
-                            <td title="509"><a target="_blank" href="#" title="509">智慧光伏解决方案</a> 
-                            </td>
-                            <td></td>
-                            <td>大型地面光伏电站</td>
-                            <td>中国首批参与西部荒漠电站开发企业之一，并在西部建有大量荒漠电站，为推进“一带一路”建设、提高电站规范运作、改善生态环境提供了良好示范。</td>
-                            <td>概述</td>
-                            <td>优势</td>
-                            <td></td>
-                            <td>方案</td>
+                            <td><?php echo ($project["id"]); ?></td>
+                            <td><?php echo ($project["type"]); ?></td>
+                            <td><?php echo ($project["category"]); ?></td>
+                            
+                            <td><?php echo ($project["name"]); ?></td>
+                           
+                            
+                            
+                            
+                            <td><?php echo ($project["addtime"]); ?></td>
+                            <td><?php echo ($project["updatetime"]); ?></td>
                             <td>
-                                <a class="link-update" href="#">修改</a>
-                                <a class="link-del" href="#">删除</a>
+                                <a class="link-update" href="/huaneng/index.php/Admin/Project/projectedit/id/<?php echo ($project["id"]); ?>">修改</a>
+                                
+                                <a class="link-del" href="/huaneng/index.php/Admin/Project/projectdel/id/<?php echo ($project["id"]); ?>">删除</a>
                             </td>
-                        </tr>
-                        <tr>
-                            <td class="tc"><input name="id[]" value="59" type="checkbox"></td>
-                            <td>
-                                <input name="ids[]" value="59" type="hidden">
-                                <input class="common-input sort-input" name="ord[]" value="0" type="text">
-                            </td>
-                            <td>5</td>
-                            <td title="509"><a target="_blank" href="#" title="509">分布式光伏解决方案</a> 
-                            </td>
-                            <td></td>
-                            <td>工商业光伏电站</td>
-                            <td>量身定制全面而完善的一站式解决方案，让客户无忧坐享财富收益，投资购买、电力购买、屋顶租赁等灵活合作模式实现客户投资收益最大化。</td>
-                            <td>概述</td>
-                            <td>优势</td>
-                            <td></td>
-                            <td>方案</td>
-                            <td>
-                                <a class="link-update" href="#">修改</a>
-                                <a class="link-del" href="#">删除</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="tc"><input name="id[]" value="59" type="checkbox"></td>
-                            <td>
-                                <input name="ids[]" value="59" type="hidden">
-                                <input class="common-input sort-input" name="ord[]" value="0" type="text">
-                            </td>
-                            <td>5</td>
-                            <td title="509"><a target="_blank" href="#" title="509">家庭光伏解决方案</a> 
-                            </td>
-                            <td></td>
-                            <td>光伏下乡</td>
-                            <td>发挥先行先试的优势，将推进光伏应用与美好乡村、现代农业发展建设相结合，通过实施光伏下乡工程增加农民收入、加速现代农业建设、促进农村经济发展。</td>
-                            <td>概述</td>
-                            <td>优势</td>
-                            <td></td>
-                            <td>方案</td>
-                            <td>
-                                <a class="link-update" href="#">修改</a>
-                                <a class="link-del" href="#">删除</a>
-                            </td>
-                        </tr>
+                        </tr><?php endforeach; endif; else: echo "" ;endif; ?>
                     </table>
-                    <div class="list-page"> 2 条 1/1 页</div>
+                    <div class="list-page"> <?php echo ($page); ?></div>
                 </div>
             </form>
         </div>
+
+
     </div>
     <!--/main-->
 </div>

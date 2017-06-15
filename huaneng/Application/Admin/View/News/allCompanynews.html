@@ -54,8 +54,8 @@
                                 <input class="common-input sort-input" name="ord[]" value="0" type="text">
                             </td>
                             <td>{$newse.id}</td>
-                            <td>{$newse.title}</td>
-                            <td>{$newse.summary}</td>
+                            <td>{$newse.title|msubstr=0,10,'utf-8',true}</td>
+                            <td>{$newse.summary|msubstr=0,20,'utf-8',true}</td>
                             <td>{$newse.addtime}</td>
                             <td>{$newse.updatetime}</td>
                             <td>

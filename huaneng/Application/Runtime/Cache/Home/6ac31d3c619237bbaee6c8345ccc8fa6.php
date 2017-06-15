@@ -61,33 +61,32 @@
           <!-- 导航栏 -->
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-            <li><a  href="index.html">首 页</a></li>
+            <li><a  href="/huaneng/index.php/Home/Index/index.html">首 页</a></li>
             <li class="dropdown">
-              <a href="产品列表.html">产品中心<span class="caret"></span></a>
+              <a href="/huaneng/index.php/Home/Product/productlist1.html">产品中心<span class="caret"></span></a>
               <ul class="dropdown-menu">
-                  <li><a href="产品列表.html">光伏逆变器</a></li>              
-                <li><a href="产品列表.html">风能变流器</a></li>
-                <li><a href="产品列表.html">储能系统</a></li>
-                <li><a href="产品列表.html">新能源汽车驱动系统</a></li>
+                <li><a href="/huaneng/index.php/Home/Product/productlist1.html">光伏逆变器</a></li>              
+                <li><a href="/huaneng/index.php/Home/Product/productlist2.html">风能变流器</a></li>
+                <li><a href="/huaneng/index.php/Home/Product/productlist3.html">储能系统</a></li>
+                <li><a href="/huaneng/index.php/Home/Product/productlist4.html">新能源汽车驱动系统</a></li>
               
               </ul>
             </li>
             <li class="dropdown">
-              <a class="active" href="方案列表.html">解决方案<span class="caret"></span></a>
+              <a class="active" href="/huaneng/index.php/Home/Project/Projectlist1.html">解决方案<span class="caret"></span></a>
               <ul class="dropdown-menu">
-                  <li><a href="方案内容1.html">光伏逆变器</a></li>
-                
-                <li><a href="方案内容2.html">电站系统</a></li>
-                <li><a href="方案内容1.html">储能系统</a></li>
-                <li><a href="方案内容1.html">新能源汽车驱动系统</a></li>
+                <li><a href="/huaneng/index.php/Home/Project/Projectlist1.html">光伏逆变器</a></li>               
+                <li><a href="/huaneng/index.php/Home/Project/Projectlist2.html">电站系统</a></li>
+                <li><a href="/huaneng/index.php/Home/Project/Projectlist3.html">储能系统</a></li>
+                <li><a href="/huaneng/index.php/Home/Project/Projectlist4.html">新能源汽车驱动系统</a></li>
                 
               </ul>
             </li>
         
             
-            <li><a href="services.html">服务与支持</a></li>
+            <li><a href="/huaneng/index.php/Home/About/services.html">服务与支持</a></li>
 
-            <li><a href="contact.html">联系我们</a></li>
+            <li><a href="/huaneng/index.php/Home/About/contact.html">联系我们</a></li>
             </ul>
           </div>
           </div>
@@ -99,39 +98,38 @@
   </div>
   <!-- //banner --> 
   <!-- 面包屑+小导航 -->
-  <div class="agile-prod">
+  <?php if(is_array($pt)): $i = 0; $__LIST__ = $pt;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><div class="agile-prod">
     <div class="container">
       <div class="breadcrumb1">       
         <ol class="breadcrumb">
-          <li><a href="index.html">首页</a></li>
-          <li><a href="方案列表.html">解决方案</a></li>
-          <li class="active">方案</li>
+          <li><a href="/huaneng/index.php/Home/Index/index.html">首页</a></li>
+          <li><a ><?php echo ($vo["type"]); ?></a></li>
+          <li class="active"><?php echo ($vo["name"]); ?></li>
         </ol>
       </div>
     </div>
-    </div>
+    </div><?php endforeach; endif; else: echo "" ;endif; ?>
     <!-- 面包屑+小导航结束 -->
-    <div class="project-3">
+    <?php if(is_array($pt)): $i = 0; $__LIST__ = $pt;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$pt): $mod = ($i % 2 );++$i;?><div class="project-3">
+      
         <div class="project-4">
           <h3>概述</h3>
-          <p class="pro-text">阳光电源是中国首批参与建设开发西部荒漠电站的工作企业之一，并且在青海、西藏、甘肃等西部地区建设了大量深具示范意义的荒漠电站项目，通过规范化操作、系统化运维及网络化服务等示范性举措定义了行业规范，在荒漠化治理方面也取得了新的突破，为推进“一带一路”建设、改善生态环境、实现生态与经济协调发展做出了巨大贡献。</p>
+          <p class="pro-text"><?php echo ($pt["content"]); ?></p>
           <div class="divide"></div>
           <h3>应用场景</h3>
-          <p class="pro-text">荒漠及荒漠化土地、戈壁等</p>
+          <p class="pro-text"><?php echo ($pt["summary"]); ?></p>
         </div>
         <div class="project-4">
         <div class="divide"></div>
-          <h3>相关案例</h3>
           
-          <img src="/huaneng/Public/before/images/al1.jpg">
-          <h4>甘肃酒泉100MW光伏电站项目</h4>
         </div>
-  </div>
+        
+  </div><?php endforeach; endif; else: echo "" ;endif; ?>
     <!-- footer -->
   <div class="footer-top">
     <div class="container">
       <div class="col-md-4 wthree-footer-top">
-        <h3><a href="index.html">华能<span>电源</span></a></h3>
+        <h3><a href="/huaneng/index.php/Home/Index/index.html">华能<span>电源</span></a></h3>
           <ul>
             <li><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span><a href="mailto:info@example.com">mail@example.com</a></li>
             <li><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>+080 264 995</li>
@@ -140,12 +138,12 @@
       <div class="col-md-3 w3ls-footer-top">
         <h3>快速<span>链接</span></h3>
             <ul>
-              <li><a href="inedx.html">首页</a></li>
-              <li><a href="产品列表.html">产品</a></li>
-              <li><a href="方案列表.html">解决方案</a></li>
+              <li><a href="/huaneng/index.php/Home/Index/index.html">首页</a></li>
+              <li><a href="/huaneng/index.php/Home/Product/Projdutlist1.html">产品</a></li>
+              <li><a href="/huaneng/index.php/Home/Project/Projectlist1.html">解决方案</a></li>
               
-              <li><a href="services.html">服务支持</a></li>
-              <li><a href="contact.html">联系我们</a></li>
+              <li><a href="/huaneng/index.php/Home/Aboutservices.html">服务支持</a></li>
+              <li><a href="/huaneng/index.php/Home/Aboutcontact.html">联系我们</a></li>
             </ul>
 
       </div>

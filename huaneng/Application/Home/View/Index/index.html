@@ -26,7 +26,7 @@
 		<div class="top">
 			<div class="container">
 				<div class="logo">
-					<h1><a href="index.html">华能<span>电源 </span></a></h1>
+					<h1><a href="__MODULE__/Index/index.html">华能<span>电源 </span></a></h1>
 				</div>
 				<div class="agileits-contact-info text-right">
 					<ul>
@@ -54,25 +54,25 @@
 				<!-- 导航栏 -->
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				  <ul class="nav navbar-nav">
-					<li><a class="active" href="index.html">首 页</a></li>
+					<li><a class="active" href="__MODULE__/Index/index.html">首 页</a></li>
 					<li class="dropdown">
-						<a href="产品列表.html">产品中心<span class="caret"></span></a>
+						<a href="__MODULE__/Product/productlist1.html">产品中心<span class="caret"></span></a>
 						<ul class="dropdown-menu">
-					      <li><a href="产品列表.html">光伏逆变器</a></li>						  
-						  <li><a href="产品列表.html">风能变流器</a></li>
-						  <li><a href="产品列表.html">储能系统</a></li>
-						  <li><a href="产品列表.html">新能源汽车驱动系统</a></li>
+					      <li><a href="__MODULE__/Product/productlist1.html">光伏逆变器</a></li>						  
+						  <li><a href="__MODULE__/Product/productlist2.html">风能变流器</a></li>
+						  <li><a href="__MODULE__/Product/productlist3.html">储能系统</a></li>
+						  <li><a href="__MODULE__/Product/productlist4.html">新能源汽车驱动系统</a></li>
 						
 					  </ul>
 					</li>
 					<li class="dropdown">
-						<a href="方案列表.html">解决方案<span class="caret"></span></a>
+						<a href="__MODULE__/Project/Projectlist1.html">解决方案<span class="caret"></span></a>
 						<ul class="dropdown-menu">
-					      <li><a href="方案内容1.html">光伏逆变器</a></li>
+					      <li><a href="__MODULE__/Project/Projectlist1.html">光伏逆变器</a></li>
 						  
-						  <li><a href="方案内容2.html">电站系统</a></li>
-						  <li><a href="方案内容1.html">储能系统</a></li>
-						  <li><a href="方案内容1.html">新能源汽车驱动系统</a></li>
+						  <li><a href="__MODULE__/Project/Projectlist2.htmll">电站系统</a></li>
+						  <li><a href="__MODULE__/Project/Projectlist3.html">储能系统</a></li>
+						  <li><a href="__MODULE__/Project/Projectlist4.html">新能源汽车驱动系统</a></li>
 						  
 					  </ul>
 					</li>
@@ -114,20 +114,20 @@
 					<div class="col-md-4 w3l-abt-grid">
 						<div class="pro">
 							<img src="__PUBLIC__/before/images/光伏逆变器.png"> 
-							<h4><a href="产品列表.html">光伏逆变器</a></h4>                         
+							<h4><a href="__MODULE__/Product/productlist1.html">光伏逆变器</a></h4>                         
 						</div>
 
 					</div>
 					<div class="col-md-4 w3l-abt-grid">
 						<div class="pro">
 							<img src="__PUBLIC__/before/images/风流.png">
-							<h4><a href="产品列表.html">风能变流器</a></h4> 
+							<h4><a href="__MODULE__/Product/productlist2.html">风能变流器</a></h4> 
 						</div>
 					</div>
 					<div class="col-md-4 w3l-abt-grid">
 						<div class="pro">
 							<img src="__PUBLIC__/before/images/储能.png">
-							<h4><a href="产品列表.html">储能系统</a></h4> 
+							<h4><a href="__MODULE__/Product/productlist3.html">储能系统</a></h4> 
 						</div>
 						
 					</div>
@@ -136,14 +136,14 @@
 					<div class="col-md-4 w3l-abt-grid">
 						<div class="pro">
 							<img src="__PUBLIC__/before/images/新能源.png">
-							<h4><a href="产品列表.html">新能源汽车驱动系统</a></h4> 
+							<h4><a href="__MODULE__/Product/productlist4.html">新能源汽车驱动系统</a></h4> 
 						</div>
 						
 					</div>
 					<div class="col-md-8 w3l-abt-grid">
 						<div class="pro">
 							<img src="__PUBLIC__/before/images/电站.png">
-							<h4><a href="产品列表.html">电站系统</a></h4> 
+							<h4><a href="__MODULE__/Project/Projectlist2.html">电站系统</a></h4> 
 						</div>
 						
 					</div>
@@ -171,7 +171,7 @@
 											<h4><a href="__MODULE__/News/content/id/{$vo.id}">{$vo.title}</a></h4>
 											<p>{$vo.summary}</p>
 										    <i class="fa fa-clock-o" aria-hidden="true">&nbsp;{$vo.updatetime}</i>
-										    <i class="fa fa-eye" aria-hidden="true">&nbsp;255</i>									    
+										    									    
 										<div class="clearfix"></div>
 									</div>
 								</volist>
@@ -207,7 +207,7 @@
 				<div class="container">
 					<h3> 展会及活动<span></span></h3>
 					<volist name="active" id="active">	
-					<h4><a href="展会活动.html">{$active.title}</a></h4>
+					<h4><a>{$active.title}</a></h4>
 					<p>{$active.time}</p>
 					<p>{$active.address}</p>
 					<br><br>
@@ -261,7 +261,7 @@
 	<div class="footer-top">
 		<div class="container">
 			<div class="col-md-4 wthree-footer-top">
-				<h3><a href="">华能<span>电源</span></a></h3>
+				<h3><a href="__MODULE__/Index/index.html">华能<span>电源</span></a></h3>
 					<ul>
 						<li><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span><a href="mailto:info@example.com">mail@example.com</a></li>
 						<li><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>+080 264 995</li>
@@ -270,12 +270,10 @@
 			<div class="col-md-3 w3ls-footer-top">
 				<h3>快速<span>链接</span></h3>
 						<ul>
-							<li><a href="">首页</a></li>
-							<li><a href="产品列表.html">产品列表</a></li>
-							<li><a href="方案列表.html">解决方案</a></li>
-							
-							<li><a href="__MODULE__/About/services.html">服务支持</a></li>
-							<li><a href="__MODULE__/About/contact.html">联系我们</a></li>
+							<li><a href="__MODULE__/Index/index.html">首页</a></li>
+			                <li><a href="__MODULE__/Product/productlist1.html">产品</a></li>
+			                <li><a href="__MODULE__/Project/projectlist1.html">解决方案</a></li>      <li><a href="__MODULE__/About/services.html">服务支持</a></li>
+			                <li><a href="__MODULE__/About/contact.html">联系我们</a></li>
 						</ul>
 
 			</div>

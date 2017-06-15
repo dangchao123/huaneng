@@ -59,7 +59,7 @@
 		<div class="top">
 			<div class="container">
 				<div class="logo">
-					<h1><a href="index.html">华能<span>电源 </span></a></h1>
+					<h1><a href="__MODULE__/Index/index.html">华能<span>电源 </span></a></h1>
 				</div>
 				<div class="agileits-contact-info text-right">
 					<ul>
@@ -87,33 +87,32 @@
 				<!-- 导航栏 -->
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				  <ul class="nav navbar-nav">
-					<li><a class="active" href="index.html">首 页</a></li>
+					<li><a class="active" href="__MODULE__/Index/index.html">首 页</a></li>
 					<li class="dropdown">
-						<a href="产品列表.html">产品中心<span class="caret"></span></a>
+						<a href="__MODULE__/Product/productlist1.html">产品中心<span class="caret"></span></a>
 						<ul class="dropdown-menu">
-					      <li><a href="产品列表.html">光伏逆变器</a></li>						  
-						  <li><a href="产品列表.html">风能变流器</a></li>
-						  <li><a href="产品列表.html">储能系统</a></li>
-						  <li><a href="产品列表.html">新能源汽车驱动系统</a></li>
+					      <li><a href="__MODULE__/Product/productlist1.html">光伏逆变器</a></li>
+					      <li><a href="__MODULE__/Product/productlist2.html">风能变流器</a></li>
+                          <li><a href="__MODULE__/Product/productlist3.html">储能系统</a></li>
+                          <li><a href="__MODULE__/Product/productlist4.html">新能源汽车驱动系统</a></li>
 						
 					  </ul>
 					</li>
 					<li class="dropdown">
-						<a href="方案列表.html">解决方案<span class="caret"></span></a>
+						<a href="__MODULE__/Project/Projectlist1.html">解决方案<span class="caret"></span></a>
 						<ul class="dropdown-menu">
-					      <li><a href="方案内容1.html">光伏逆变器</a></li>
-						  
-						  <li><a href="方案内容2.html">电站系统</a></li>
-						  <li><a href="方案内容1.html">储能系统</a></li>
-						  <li><a href="方案内容1.html">新能源汽车驱动系统</a></li>
+					      <li><a href="__MODULE__/Project/Projectlist1.html">光伏逆变器</a></li>
+					      <li><a href="__MODULE__/Project/Projectlist2.html">电站系统</a></li>
+                          <li><a href="__MODULE__/Project/Projectlist3.html">储能系统</a></li>
+                          <li><a href="__MODULE__/Project/Projectlist4.html">新能源汽车驱动系统</a></li>
 						  
 					  </ul>
 					</li>
 			
 					
-					<li><a href="services.html">服务与支持</a></li>
+					<li><a href="__MODULE__/About/services.html">服务与支持</a></li>
 
-					<li><a href="contact.html">联系我们</a></li>
+					<li><a href="__MODULE__/About/contact.html">联系我们</a></li>
 				  </ul>
 				</div>
 			  </div>
@@ -129,17 +128,17 @@
 		<div class="container">
 			<div class="breadcrumb1">				
 				<ol class="breadcrumb">
-					<li><a href="index.html">首页</a></li>
-					<li><a href="index.html">关于华能</a></li>
+					<li><a href="__MODULE__ /Index/index.html">首页</a></li>
+					
 					<li class="active">公司公告</li>
 				</ol>
 			</div>
 			<div class="nav2">
 	            <ul>
-	                <li><a href="公司介绍.html">公司介绍</a></li>
-	                <li><a href="企业文化.html">企业文化</a></li>
-	                <li><a href="发展历程.html">发展历程</a></li>
-	                <li><a class="active"href="公司公告.html">公司公告</a></li>
+	                <li><a href="__MODULE__/About/summary.html">公司介绍</a></li>
+	                <li><a href="__MODULE__/About/culture.html">企业文化</a></li>
+	                <li><a href="__MODULE__/About/develop.html">发展历程</a></li>
+	                <li><a class="active"href="__MODULE__/About/notice.html">公司公告</a></li>
 	            </ul>
 			</div>
 		</div>
@@ -155,12 +154,12 @@
                 	<span class="fa  fa-file-text-o" aria-hidden="true"></span>
                 </div>
                 <div class="nt-text col-md-11">
-                	<h4><a href="__PUBLIC__/before/">{$notice.title}</a></h4>
+                	<h4><a href="__PUBLIC__/before/公告.docx">{$notice.title}</a></h4>
                 	<p>{$notice.updatetime}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>{$notice.size}KB|{$notice.type}</span></p>
+
                 </div>
         	</div>
         </volist>
-        	
         </div>
 
       <!--   <div class="container">
@@ -212,7 +211,7 @@
 	<div class="footer-top">
 		<div class="container">
 			<div class="col-md-4 wthree-footer-top">
-				<h3><a href="index.html">华能<span>电源</span></a></h3>
+				<h3><a href="__MODULE__/Index/index.html">华能<span>电源</span></a></h3>
 					<ul>
 						<li><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span><a href="mailto:info@example.com">mail@example.com</a></li>
 						<li><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>+080 264 995</li>
@@ -221,12 +220,10 @@
 			<div class="col-md-3 w3ls-footer-top">
 				<h3>快速<span>链接</span></h3>
 						<ul>
-							<li><a href="index.html">首页</a></li>
-							<li><a href="产品列表.html">产品</a></li>
-							<li><a href="方案列表.html">解决方案</a></li>
-							
-							<li><a href="services.html">服务支持</a></li>
-							<li><a href="contact.html">联系我们</a></li>
+							<li><a href="__MODULE__/Index/index.html">首页</a></li>
+			                <li><a href="__MODULE__/Product/productlist1.html">产品</a></li>
+			                <li><a href="__MODULE__/Project/projectlist1.html">解决方案</a></li>      <li><a href="__MODULE__/About/services.html">服务支持</a></li>
+			                <li><a href="__MODULE__/About/contact.html">联系我们</a></li>
 						</ul>
 
 			</div>

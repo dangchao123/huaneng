@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/after/css/common.css"/>
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/after/css/main.css"/>
+    <script type="text/javascript" src="__PUBLIC__/after/js/libs/modernizr.min.js"></script>
+    <style type="text/css">
+    .sidebar-list input[type=checkbox] {
+      /* hide native checkbox */
+      position: absolute;
+      opacity: 0;
+    }
+    .sidebar-list label, .sidebar-list a {
+      position: relative;
+      display: block;
+    }   
+    .sidebar-list ul {
+      display: none;
+    }
+ 
+    .sidebar-list input[type=checkbox]:checked + label + ul,
+    .sidebar-list input[type=checkbox]:checked + label:nth-of-type(n) + ul {
+      display: block;
+    }    
+
+
+    </style>
+</head>
+<body>
+<div class="topbar-wrap white">
+    <div class="topbar-inner clearfix">
+        <div class="topbar-logo-wrap clearfix">
+            <h1 class="topbar-logo none"><a href="__MODULE__/Index/index.html" class="navbar-brand">后台管理</a></h1>
+            
+        </div>
+        <div class="top-info-wrap">
+            <ul class="top-info-list clearfix">
+                <li><a href="">{$_SESSION['name']}</a></li>
+                <li><a href="{:U(Admin/Admin/logout)}">退出</a></li>
+            </ul>
+            
+        </div>
+
+    </div>
+</div>
+<div class="container clearfix">
+    <div class="sidebar-wrap">
+        <div class="sidebar-title">
+            <h1>菜单</h1>
+        </div>
+        <div class="sidebar-content">
+            <ul class="sidebar-list">
+                <li class="menu">
+                    <input type="checkbox" name ="group-1" id="group-1">
+                    <label for="group-1"><a><i class="icon-font">&#xe014;</i>管理员管理</a></label>
+                    <ul class="sub-menu">
+                        <li><a href="__MODULE__/Administrator/allAdministrator.html"><i class="icon-font">&#xe003;</i>所有管理员</a></li>
+                        <li><a href="__MODULE__/Administrator/addAdministrator.html"><i class="icon-font">&#xe026;</i>添加管理员</a></li>
+                    </ul>
+                </li>
+
+                <li class="menu">
+                    <input type="checkbox" name ="group-2" id="group-2">
+                    <label for="group-2"><a><i class="icon-font">&#xe005;</i>产品管理</a></label>
+                    <ul class="sub-menu">
+                        <li><a href="__MODULE__/Product/allProducts.html"><i class="icon-font">&#xe005;</i>所有产品</a></li>
+                        <li><a href="__MODULE__/Product/addProduct.html"><i class="icon-font">&#xe026;</i>添加产品</a></li>
+                        <li><a href="__MODULE__/Product/consult.html"><i class="icon-font">&#xe012;</i>产品咨询</a></li>
+                    </ul>
+                </li>
+                <li class="menu">
+                    <input type="checkbox" name ="group-3" id="group-3">
+                    <label for="group-3"><a><i class="icon-font">&#xe048;</i>新闻管理</a></label>
+                    <ul class="sub-menu">
+                        <li><a href="__MODULE__/News/allCompanynews.html"><i class="icon-font">&#xe048;</i>所有公司新闻<li><a href="__MODULE__/News/addCompanynews.html"><i class="icon-font">&#xe026;</i>添加公司新闻</a></li>
+                        <li><a href="__MODULE__/News1/allMediannews.html"><i class="icon-font">&#xe048;</i>所有媒体新闻</a></li>
+                        <li><a href="__MODULE__/News1/addMediannews.html"><i class="icon-font">&#xe026;</i>添加媒体新闻</a></li>
+                        
+                        <li><a href="__MODULE__/Active/allActive.html"><i class="icon-font">&#xe048;</i>所有展会活动</a></li>
+                        <li><a href="__MODULE__/Active/addActive.html"><i class="icon-font">&#xe026;</i>添加展会活动</a></li>
+                    </ul>
+                </li>
+                <li class="menu">
+                    <input type="checkbox" name ="group-4" id="group-4">
+                    <label for="group-4"><a><i class="icon-font">&#xe005;</i>解决方案</a></label>
+                    <ul class="sub-menu">
+                        <li><a href="__MODULE__/Project/allProjects.html"><i class="icon-font">&#xe005;</i>所有方案</a></li>
+                        <li><a href="__MODULE__/Project/addProject.html"><i class="icon-font">&#xe026;</i>添加方案</a></li>
+                    </ul>
+                </li>
+               <li class="menu">
+                <input type="checkbox" name ="group-5" id="group-5">
+                    <label for="group-5"><a><i class="icon-font">&#xe043;</i>公司公告</a></label>
+                <ul class="sub-menu">
+                    <li><a href="__MODULE__/Notice/allNotice.html"><i class="icon-font">&#xe043;</i>所有公告</a></li>
+                    <li><a href="__MODULE__/Notice/addNotice.html"><i class="icon-font">&#xe026;</i>添加公告</a></li>
+                </ul>
+            </li>
+            </ul>
+        </div>
+    </div>
+    <!--/sidebar-->
+    <div class="main-wrap">
+        <block name="main"></block>
+    </div>
+    <!--/main-->
+</div>
+</body>
+</html>

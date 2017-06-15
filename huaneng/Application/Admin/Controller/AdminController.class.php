@@ -3,7 +3,7 @@ namespace Admin\Controller;
 use Think\Controller;
 class AdminController extends Controller {
      
-    public function denglu(){
+    public function login(){
        
          if(IS_POST){
             $adminUsersModel=M('administrator');//表名为admin_users,实例化模型时，下划线去掉，后面第一个字母大写
@@ -18,7 +18,7 @@ class AdminController extends Controller {
          if($result>0){
             session("name",I("post.name"));
             //session存取值，手册
-            $this->success("登录成功！",U("Index/index"));
+            $this->redirect("Administrator/allAdministrator");
            
          }
          else{
@@ -28,6 +28,11 @@ class AdminController extends Controller {
          else{
          $this->display();
          }
+     }
+     public function logout(){
+        session(null);
+        $this->redirect('Admin/login');
+
      }
 
 

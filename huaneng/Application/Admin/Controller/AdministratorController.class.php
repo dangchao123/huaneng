@@ -63,7 +63,7 @@ class AdministratorController extends Controller {
                
 
                 if($administratorModel->add($data)){
-                    $this->success("添加成功！",U("Admin/Administrator/allAdministrator"));
+                    $this->redirect("Admin/Administrator/allAdministrator");
                 }else{
                     $this->error("插入失败！");
                 }
@@ -76,10 +76,10 @@ class AdministratorController extends Controller {
             foreach($id as $value){
                 M("administrator")->delete($value);
             }
-            $this->success("批量删除成功！",U("Admin/Administrator/allAdministrator"));
+            $this->redirect("Admin/Administrator/allAdministrator");
         }else{
             if(M("administrator")->delete($id)){
-                $this->success("删除成功！",U("Admin/Administrator/allAdministrator"));
+                $this->redirect("Admin/Administrator/allAdministrator");
             }else{
                 $this->error("删除失败！");
             }
@@ -112,7 +112,7 @@ class AdministratorController extends Controller {
                     //var_dump($data);exit;
                     
                     if($administratorModel->where("id='%d'",$id)->save($data)){
-                        $this->success("编辑成功！",U("Admin/Administrator/allAdministrator"));
+                        $this->redirect("Admin/Administrator/allAdministrator");
                     }else{
                         $this->error("编辑失败！");
                     }
@@ -122,8 +122,8 @@ class AdministratorController extends Controller {
         else{
             $id = isset($_GET['id']) ? intval($_GET['id']) : ''; //获得修改用户的ID
             $administratorModel = D("administrator");
-            $news = $administratorModel->where("id='%d'",$id)->find(); //从数据库找到需要修改的用户信息
-            $this->assign("news",$news);
+            $administrator = $administratorModel->where("id='%d'",$id)->find(); //从数据库找到需要修改的用户信息
+            $this->assign("administrator",$administrator);
             $this->display();
         }
     }

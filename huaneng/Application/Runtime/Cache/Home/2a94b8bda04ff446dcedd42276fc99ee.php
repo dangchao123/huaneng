@@ -26,7 +26,7 @@
 		<div class="top">
 			<div class="container">
 				<div class="logo">
-					<h1><a href="index.html">华能<span>电源 </span></a></h1>
+					<h1><a href="/huaneng/index.php/Home/Index/index.html">华能<span>电源 </span></a></h1>
 				</div>
 				<div class="agileits-contact-info text-right">
 					<ul>
@@ -54,33 +54,33 @@
 				<!-- 导航栏 -->
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 				  <ul class="nav navbar-nav">
-					<li><a class="active" href="index.html">首 页</a></li>
+					<li><a class="active" href="/huaneng/index.php/Home/Index/index.html">首 页</a></li>
 					<li class="dropdown">
-						<a href="产品列表.html">产品中心<span class="caret"></span></a>
+						<a href="/huaneng/index.php/Home/Product/productlist1.html">产品中心<span class="caret"></span></a>
 						<ul class="dropdown-menu">
-					      <li><a href="产品列表.html">光伏逆变器</a></li>						  
-						  <li><a href="产品列表.html">风能变流器</a></li>
-						  <li><a href="产品列表.html">储能系统</a></li>
-						  <li><a href="产品列表.html">新能源汽车驱动系统</a></li>
+					      <li><a href="/huaneng/index.php/Home/Product/productlist1.html">光伏逆变器</a></li>						  
+						  <li><a href="/huaneng/index.php/Home/Product/productlist2.html">风能变流器</a></li>
+						  <li><a href="/huaneng/index.php/Home/Product/productlist3.html">储能系统</a></li>
+						  <li><a href="/huaneng/index.php/Home/Product/productlist4.html">新能源汽车驱动系统</a></li>
 						
 					  </ul>
 					</li>
 					<li class="dropdown">
-						<a href="方案列表.html">解决方案<span class="caret"></span></a>
+						<a href="/huaneng/index.php/Home/Project/Projectlist1.html">解决方案<span class="caret"></span></a>
 						<ul class="dropdown-menu">
-					      <li><a href="方案内容1.html">光伏逆变器</a></li>
+					      <li><a href="/huaneng/index.php/Home/Project/Projectlist1.html">光伏逆变器</a></li>
 						  
-						  <li><a href="方案内容2.html">电站系统</a></li>
-						  <li><a href="方案内容1.html">储能系统</a></li>
-						  <li><a href="方案内容1.html">新能源汽车驱动系统</a></li>
+						  <li><a href="/huaneng/index.php/Home/Project/Projectlist2.htmll">电站系统</a></li>
+						  <li><a href="/huaneng/index.php/Home/Project/Projectlist3.html">储能系统</a></li>
+						  <li><a href="/huaneng/index.php/Home/Project/Projectlist4.html">新能源汽车驱动系统</a></li>
 						  
 					  </ul>
 					</li>
 			
 					
-					<li><a href="services.html">服务与支持</a></li>
+					<li><a href="/huaneng/index.php/Home/About/services.html">服务与支持</a></li>
 
-					<li><a href="contact.html">联系我们</a></li>
+					<li><a href="/huaneng/index.php/Home/About/contact.html">联系我们</a></li>
 				  </ul>
 				</div>
 			  </div>
@@ -114,20 +114,20 @@
 					<div class="col-md-4 w3l-abt-grid">
 						<div class="pro">
 							<img src="/huaneng/Public/before/images/光伏逆变器.png"> 
-							<h4><a href="产品列表.html">光伏逆变器</a></h4>                         
+							<h4><a href="/huaneng/index.php/Home/Product/productlist1.html">光伏逆变器</a></h4>                         
 						</div>
 
 					</div>
 					<div class="col-md-4 w3l-abt-grid">
 						<div class="pro">
 							<img src="/huaneng/Public/before/images/风流.png">
-							<h4><a href="产品列表.html">风能变流器</a></h4> 
+							<h4><a href="/huaneng/index.php/Home/Product/productlist2.html">风能变流器</a></h4> 
 						</div>
 					</div>
 					<div class="col-md-4 w3l-abt-grid">
 						<div class="pro">
 							<img src="/huaneng/Public/before/images/储能.png">
-							<h4><a href="产品列表.html">储能系统</a></h4> 
+							<h4><a href="/huaneng/index.php/Home/Product/productlist3.html">储能系统</a></h4> 
 						</div>
 						
 					</div>
@@ -136,14 +136,14 @@
 					<div class="col-md-4 w3l-abt-grid">
 						<div class="pro">
 							<img src="/huaneng/Public/before/images/新能源.png">
-							<h4><a href="产品列表.html">新能源汽车驱动系统</a></h4> 
+							<h4><a href="/huaneng/index.php/Home/Product/productlist4.html">新能源汽车驱动系统</a></h4> 
 						</div>
 						
 					</div>
 					<div class="col-md-8 w3l-abt-grid">
 						<div class="pro">
 							<img src="/huaneng/Public/before/images/电站.png">
-							<h4><a href="产品列表.html">电站系统</a></h4> 
+							<h4><a href="/huaneng/index.php/Home/Project/Projectlist2.html">电站系统</a></h4> 
 						</div>
 						
 					</div>
@@ -166,8 +166,15 @@
 								</div>
 							</div>
 							<div class="col-md-7 what-grid1">
+								<?php if(is_array($news)): $i = 0; $__LIST__ = $news;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><div class="news">
+											<h4><a href="/huaneng/index.php/Home/News/content/id/<?php echo ($vo["id"]); ?>"><?php echo ($vo["title"]); ?></a></h4>
+											<p><?php echo ($vo["summary"]); ?></p>
+										    <i class="fa fa-clock-o" aria-hidden="true">&nbsp;<?php echo ($vo["updatetime"]); ?></i>
+										    									    
+										<div class="clearfix"></div>
+									</div><?php endforeach; endif; else: echo "" ;endif; ?>
 								
-								<div class="news">
+								<!-- <div class="news">
 									
 										<h4><a href="新闻内容.html">臻于至善 领跑未来——华能电源新品发布会点亮SNEC</a></h4>
 										<p>2017年4月19日，在全球光伏盛会SNEC2017首日，全球光伏逆变领跑者华能电源隆重举行了“臻于至善 领跑未来——华能电源2017新品发布会”。华能电源董事长、中国可再生能源学会秘书长、业内领导、公司合作伙伴及媒体人士等数百人出席了本次发布会，共同见证了华能电源六款新品震撼面世。</p>
@@ -184,12 +191,12 @@
 										<i class="fa fa-clock-o" aria-hidden="true">&nbsp;2017-04-25</i>
 									    <i class="fa fa-eye" aria-hidden="true">&nbsp;255</i>
 									<div class="clearfix"></div>
-								</div>
+								</div> -->
 
 							</div>
 							<div class="clearfix"></div>
 						</div>
-                        <h5 ><a style="text-deriction:none;" href="公司新闻.html">更多>></a></h5>
+                        <h5 ><a style="text-deriction:none;" href="/huaneng/index.php/Home/News/companynews.html">更多>></a></h5>
 					</div>
 				</div>
 			<!--新闻-->
@@ -197,15 +204,12 @@
 			<div class="w3layouts-clients">
 				<div class="container">
 					<h3> 展会及活动<span></span></h3>
-					<h4><a href="展会活动.html">德国 • 新慕尼黑太阳能技术博览会（Intersolar Europe 2017）</a></h4>
-					<p>2017.05.31-06.02</p>
-					<p>德国 • 新慕尼会展中心</p>
-					<br><br>
-					<h4><a href="展会活动.html">2017年北京国际风能大会暨展览会（CWP 2017）</a></h4>
-					<p>2017.10.17-19</p>
-					<p>中国国际展览中心新馆（北京市天竺裕翔路88号 • 新国展）</p>
-					<br>
-					<h5><a href="展会活动.html">更多>></a></h5>
+					<?php if(is_array($active)): $i = 0; $__LIST__ = $active;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$active): $mod = ($i % 2 );++$i;?><h4><a><?php echo ($active["title"]); ?></a></h4>
+					<p><?php echo ($active["time"]); ?></p>
+					<p><?php echo ($active["address"]); ?></p>
+					<br><br><?php endforeach; endif; else: echo "" ;endif; ?>
+					<h5><a href="/huaneng/index.php/Home/Active/Active.html">更多>></a></h5>
+
 
 				</div>
 			</div>
@@ -224,7 +228,7 @@
 							<img src="/huaneng/Public/before/images/介绍.jpg" class="img-responsive" alt="">
 							<div class="textbox"></div>
 						</div>
-						<h4><a href="公司介绍.html">公司介绍</a></h4>						
+						<h4><a href="/huaneng/index.php/Home/About/summary.html">公司介绍</a></h4>						
 					</div>
 				</div>
 				<div class="col-sm-4 rides-grid">
@@ -233,7 +237,7 @@
 							<img src="/huaneng/Public/before/images/文化.jpg" class="img-responsive" alt="">
 							<div class="textbox"></div>
 						</div>
-						<h4><a href="企业文化.html">企业文化</a></h4>						
+						<h4><a href="/huaneng/index.php/Home/About/culture.html">企业文化</a></h4>						
 					</div>
 				</div>
 				<div class="col-sm-4 rides-grid">
@@ -242,7 +246,7 @@
 							<img src="/huaneng/Public/before/images/历程.jpg" class="img-responsive" alt="">
 							<div class="textbox"></div>
 						</div>
-						<h4><a href="发展历程.html">发展历程</a></h4>						
+						<h4><a href="/huaneng/index.php/Home/About/develop.html">发展历程</a></h4>						
 					</div>
 				</div>
 				<div class="clearfix"> </div>
@@ -253,7 +257,7 @@
 	<div class="footer-top">
 		<div class="container">
 			<div class="col-md-4 wthree-footer-top">
-				<h3><a href="">华能<span>电源</span></a></h3>
+				<h3><a href="/huaneng/index.php/Home/Index/index.html">华能<span>电源</span></a></h3>
 					<ul>
 						<li><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span><a href="mailto:info@example.com">mail@example.com</a></li>
 						<li><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>+080 264 995</li>
@@ -262,12 +266,10 @@
 			<div class="col-md-3 w3ls-footer-top">
 				<h3>快速<span>链接</span></h3>
 						<ul>
-							<li><a href="index.html">首页</a></li>
-							<li><a href="产品列表.html">产品列表</a></li>
-							<li><a href="方案列表.html">解决方案</a></li>
-							
-							<li><a href="services.html">服务支持</a></li>
-							<li><a href="contact.html">联系我们</a></li>
+							<li><a href="/huaneng/index.php/Home/Index/index.html">首页</a></li>
+			                <li><a href="/huaneng/index.php/Home/Product/productlist1.html">产品</a></li>
+			                <li><a href="/huaneng/index.php/Home/Project/projectlist1.html">解决方案</a></li>      <li><a href="/huaneng/index.php/Home/About/services.html">服务支持</a></li>
+			                <li><a href="/huaneng/index.php/Home/About/contact.html">联系我们</a></li>
 						</ul>
 
 			</div>

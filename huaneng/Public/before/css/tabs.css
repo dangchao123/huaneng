@@ -232,6 +232,7 @@ h2 {
 	 padding-left: 1em;
 
  }
+ 
 @media screen and (max-width: 58em) {
 	.tabs nav a.icon span {
 		display: none;
