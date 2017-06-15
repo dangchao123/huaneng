@@ -5,20 +5,12 @@
         </div>
         <div class="search-wrap">
             <div class="search-content">
-                <form action="/jscss/admin/design/index" method="post">
+                <form action="" method="get">
                     <table class="search-tab">
                         <tr>
-                            <th width="120">选择分类:</th>
-                            <td>
-                                <select name="search-sort" id="">
-                                    <option value="">全部</option>
-                                    <option value="19">光伏逆变器</option>
-                                    <option value="20">风能逆变器</option>
-                                    <option value="19">储能系统</option>
-                                    <option value="20">新能源汽车系统</option>
-                            </td>
+                            
                             <th width="70">关键字:</th>
-                            <td><input class="common-text" placeholder="关键字" name="keywords" value="" id="" type="text"></td>
+                            <td><input class="common-text" placeholder="关键字" name="search" value="" id="" type="text"></td>
                             <td><input class="btn btn-primary btn2" name="sub" value="查询" type="submit"></td>
                         </tr>
                     </table>
@@ -30,8 +22,7 @@
                 <div class="result-title">
                     <div class="result-list">
                         <a href="addProduct.html"><i class="icon-font"></i>新增留言</a>
-                        <a id="batchDel" href="javascript:void(0)"><i class="icon-font"></i>批量删除</a>
-                        <a id="updateOrd" href="javascript:void(0)"><i class="icon-font"></i>更新排序</a>
+                        
                     </div>
                 </div>
                 <div class="result-content">
@@ -40,54 +31,43 @@
                             <th class="tc" width="5%"><input class="allChoose" name="" type="checkbox"></th>
                             <th>排序</th>
                             <th>ID</th>
-                            <th>型号</th>
-                            <th>类型</th>
+                            <th>姓名</th>
+                            
                             <th>公司</th>
+                            <th>型号</th>
+                            <th>咨询内容</th>
                             <th>电话</th>
                             <th>邮箱</th>
-                            <th>备注</th>
+                           
                             <th>操作</th>
                         </tr>
+                        <volist name="consult" id="vo">
                         <tr>
                             <td class="tc"><input name="id[]" value="59" type="checkbox"></td>
                             <td>
                                 <input name="ids[]" value="59" type="hidden">
                                 <input class="common-input sort-input" name="ord[]" value="0" type="text">
                             </td>
-                            <td>59</td>
-                            <td title="509"><a target="_blank" href="#" title="509">SG500MX</a> 
-                            </td>
-                            <td>光伏逆变器</td>
-                            <td>河北石家庄</td>
-                            <td>8080088</td>
-                            <td>123456789@qq.com</td>
-                            <td></td>
+                            <td>{$vo.id}</td>
+                            <td>{$vo.username}</td>
+                            <td>{$vo.company}</td>
+                            <td>{$vo.cate}</td>
+                            <td>{$vo.content}</td>
+
+                            <td>{$vo.phone}</td>
+                            <td>{$vo.email}</td>
+                       
+                          
                             <td>
-                                <a class="link-update" href="#">修改</a>
-                                <a class="link-del" href="#">删除</a>
+                                
+                                
+                                <a class="link-del" href="__MODULE__/Consult/del/id/{$vo.id}">删除</a>
                             </td>
                         </tr>
-                        <tr>
-                            <td class="tc"><input name="id[]" value="59" type="checkbox"></td>
-                            <td>
-                                <input name="ids[]" value="59" type="hidden">
-                                <input class="common-input sort-input" name="ord[]" value="0" type="text">
-                            </td>
-                            <td>59</td>
-                            <td title="509"><a target="_blank" href="#" title="509">SG500MX</a> 
-                            </td>
-                            <td>风能逆变器</td>
-                            <td>河北石家庄</td>
-                            <td>8080088</td>
-                            <td>123456789@qq.com</td>
-                            <td></td>
-                            <td>
-                                <a class="link-update" href="#">修改</a>
-                                <a class="link-del" href="#">删除</a>
-                            </td>
-                        </tr>
+                    </volist>
+                        
                     </table>
-                    <div class="list-page"> 2 条 1/1 页</div>
+                    <div class="list-page"> {$page}</div>
                 </div>
             </form>
         </div>

@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>所有会展活动</title>
+    <title>添加媒体新闻</title>
     <link rel="stylesheet" type="text/css" href="css/common.css"/>
     <link rel="stylesheet" type="text/css" href="css/main.css"/>
     <script type="text/javascript" src="js/libs/modernizr.min.js"></script>
@@ -13,7 +13,7 @@
         <div class="topbar-logo-wrap clearfix">
             <h1 class="topbar-logo none"><a href="index.html" class="navbar-brand">后台管理</a></h1>
             <ul class="navbar-list clearfix">
-                
+               
                 
             </ul>
         </div>
@@ -26,7 +26,7 @@
     </div>
 </div>
 <div class="container clearfix">
-    <div class="sidebar-wrap">
+   <div class="sidebar-wrap">
         <div class="sidebar-title">
             <h1>菜单</h1>
         </div>
@@ -85,65 +85,45 @@
     <div class="main-wrap">
 
         <div class="crumb-wrap">
-            <div class="crumb-list"><i class="icon-font"></i><a href="index.html">首页</a><span class="crumb-step">&gt;</span><span class="crumb-name">所有活动</span></div>
+            <div class="crumb-list"><i class="icon-font"></i><a href="index.html">首页</a><span class="crumb-step">&gt;</span><a class="crumb-name" href="allNewses.html">新闻管理</a><span class="crumb-step">&gt;</span><span>新增新闻</span></div>
         </div>
         <div class="result-wrap">
-            <form name="myform" id="myform" method="post">
-                <div class="result-title">
-                    <div class="result-list">
-                        <a href="addNews.html"><i class="icon-font"></i>新增活动</a>
-                        <a id="batchDel" href="javascript:void(0)"><i class="icon-font"></i>批量删除</a>
-                        <a id="updateOrd" href="javascript:void(0)"><i class="icon-font"></i>更新排序</a>
-                    </div>
-                </div>
-                <div class="result-content">
-                    <table class="result-tab" width="100%">
-                        <tr>
-                            <th class="tc" width="5%"><input class="allChoose" name="" type="checkbox"></th>
-                            <th>排序</th>
-                            <th>ID</th>
-                            <th>标题</th>
-                            <th>发布时间</th>
-                            <th>更新时间</th>
-                            <th>操作</th>
-                        </tr>
-                        <tr>
-                            <td class="tc"><input name="id[]" value="59" type="checkbox"></td>
-                            <td>
-                                <input name="ids[]" value="59" type="hidden">
-                                <input class="common-input sort-input" name="ord[]" value="0" type="text">
-                            </td>
-                            <td>59</td>
-                            <td title="2015中国国际矿业大会组委会会议10月26日下午在津召开"><a target="_blank" href="#" title="2015中国国际矿业大会组委会会议10月26日下午在津召开">2015中国国际</a> …
-                            </td>
-                            <td>2016-09-05 21:11:01</td>
-                            <td>2016-09-06 09:11:01</td>
-                            <td>
-                                <a class="link-update" href="reviseNews.html">修改</a>
-                                <a class="link-del" href="#">删除</a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="tc"><input name="id[]" value="59" type="checkbox"></td>
-                            <td>
-                                <input name="ids[]" value="59" type="hidden">
-                                <input class="common-input sort-input" name="ord[]" value="0" type="text">
-                            </td>
-                            <td>59</td>
-                            <td title="2015中国国际矿业大会组委会会议10月26日下午在津召开"><a target="_blank" href="#" title="2015中国国际矿业大会组委会会议10月26日下午在津召开">2015中国国际</a> …
-                            </td>
-                            <td>2016-09-05 21:11:01</td>
-                            <td>2016-09-06 09:11:01</td>
-                            <td>
-                                <a class="link-update" href="#">修改</a>
-                                <a class="link-del" href="#">删除</a>
-                            </td>
-                        </tr>
-                    </table>
-                    <div class="list-page"> 2 条 1/1 页</div>
-                </div>
-            </form>
+            <div class="result-content">
+                <form action="/jscss/admin/design/add" method="post" id="myform" name="myform" enctype="multipart/form-data">
+                    <table class="insert-tab" width="100%">
+                        <tbody>
+                            <tr>
+                                <th><i class="require-red">*</i>标题：</th>
+                                <td>
+                                    <input class="common-text required" id="title" name="title" size="50" value="" type="text">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>描述：</th>
+                                <td><textarea name="content" class="common-textarea" id="content" cols="30" style="width: 98%;" rows="3"></textarea></td>
+                            </tr>
+                            <tr>
+                                <th>内容：</th>
+                                <td><textarea name="content" class="common-textarea" id="content" cols="30" style="width: 98%;" rows="10"></textarea></td>
+                            </tr>
+                            <tr>
+                                <th>上传：</th>
+                                <td><form>
+                                    <input type="file" name="uplode">
+                                </form></td>
+                            </tr>
+                            <tr>
+                                <th></th>
+                                <td>
+                                    <input class="btn btn-primary btn6 mr10" value="提交" type="submit">
+                                    <input class="btn btn6" onclick="history.go(-1)" value="返回" type="button">
+                                </td>
+                            </tr>
+                        </tbody></table>
+                </form>
+            </div>
         </div>
+
     </div>
     <!--/main-->
 </div>
